@@ -731,12 +731,9 @@
 		089C166AFE841209C02AAC07 /* IPlugExample */ = {
 			isa = PBXGroup;
 			children = (
-				52FBBED30D0CF143001C8B8A /* resource.h */,
-				52FBBED20D0CF13D001C8B8A /* Dolorean.h */,
-				52FBBED00D0CF139001C8B8A /* Dolorean.cpp */,
+				A532F3431CEE6FD1007EA333 /* Sources */,
 				089C167CFE841241C02AAC07 /* Resources */,
-				32C88E010371C26100C91783 /* Other Sources */,
-				089C1671FE841209C02AAC07 /* Frameworks and Libraries */,
+				A532F3401CEE6F24007EA333 /* Misc */,
 				19C28FB8FE9D52D311CA2CBB /* Products */,
 			);
 			name = IPlugExample;
@@ -754,6 +751,7 @@
 		089C167CFE841241C02AAC07 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				52FBBED30D0CF143001C8B8A /* resource.h */,
 				4FD16A0213B6303B001D0217 /* img */,
 				4F23BA1413B647E50097A67E /* Dolorean-OSXAPP-Info.plist */,
 				4F23BA1513B647E50097A67E /* Dolorean-VST2-Info.plist */,
@@ -1325,6 +1323,56 @@
 				4F78D8BD13B63A4E0032E0F3 /* wdltypes.h */,
 			);
 			name = WDL;
+			sourceTree = "<group>";
+		};
+		A532F3401CEE6F24007EA333 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				32C88E010371C26100C91783 /* Other Sources */,
+				089C1671FE841209C02AAC07 /* Frameworks and Libraries */,
+			);
+			name = Misc;
+			sourceTree = "<group>";
+		};
+		A532F3431CEE6FD1007EA333 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				A532F3451CEE6FE8007EA333 /* Plugins */,
+				A532F3441CEE6FDE007EA333 /* Base */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		A532F3441CEE6FDE007EA333 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				52FBBED20D0CF13D001C8B8A /* Dolorean.h */,
+				52FBBED00D0CF139001C8B8A /* Dolorean.cpp */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		A532F3451CEE6FE8007EA333 /* Plugins */ = {
+			isa = PBXGroup;
+			children = (
+				A532F3471CEE6FF2007EA333 /* Disto */,
+				A532F3461CEE6FEE007EA333 /* Delay */,
+			);
+			name = Plugins;
+			sourceTree = "<group>";
+		};
+		A532F3461CEE6FEE007EA333 /* Delay */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Delay;
+			sourceTree = "<group>";
+		};
+		A532F3471CEE6FF2007EA333 /* Disto */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Disto;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
