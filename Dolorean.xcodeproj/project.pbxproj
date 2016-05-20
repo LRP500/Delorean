@@ -30,9 +30,6 @@
 		4F20EECB132C69FE0030E34C /* Dolorean.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52FBBED00D0CF139001C8B8A /* Dolorean.cpp */; };
 		4F20EF2D132C69FE0030E34C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
 		4F20EF2E132C69FE0030E34C /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52C4DB180D0E51270007A920 /* Carbon.framework */; };
-		4F23B9F313B647A00097A67E /* knob.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F23B9E413B647A00097A67E /* knob.png */; };
-		4F23B9FD13B647A00097A67E /* knob.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F23B9E413B647A00097A67E /* knob.png */; };
-		4F23BA0C13B647A00097A67E /* knob.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F23B9E413B647A00097A67E /* knob.png */; };
 		4F296BDA1678E6C800C0F5C2 /* dfx-au-utilities.c in Sources */ = {isa = PBXBuildFile; fileRef = 4FA88B901444E4C4006CB8DA /* dfx-au-utilities.c */; settings = {COMPILER_FLAGS = "-w"; }; };
 		4F3AE17B12C0E5E2001FD7A4 /* resource.h in Headers */ = {isa = PBXBuildFile; fileRef = 52FBBED30D0CF143001C8B8A /* resource.h */; };
 		4F3AE17C12C0E5E2001FD7A4 /* Dolorean.h in Headers */ = {isa = PBXBuildFile; fileRef = 52FBBED20D0CF13D001C8B8A /* Dolorean.h */; };
@@ -154,7 +151,6 @@
 		4F78DABA13B640530032E0F3 /* RtMidi.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F78D8C313B63A700032E0F3 /* RtMidi.h */; };
 		4F78DABB13B640620032E0F3 /* IPlugStandalone.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F78D9EA13B63BE90032E0F3 /* IPlugStandalone.h */; };
 		4F79A34E146304CD00744AED /* IPlugProcessAS.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F79A34C146304CD00744AED /* IPlugProcessAS.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
-		4F7F5C4613E95EC8002918FD /* knob.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F23B9E413B647A00097A67E /* knob.png */; };
 		4F7F5C4913E95EC8002918FD /* Dolorean.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52FBBED00D0CF139001C8B8A /* Dolorean.cpp */; };
 		4F7F5C5013E95EC8002918FD /* swell-gdi.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4FD16D0B13B634BF001D0217 /* swell-gdi.mm */; settings = {COMPILER_FLAGS = "-w"; }; };
 		4F7F5C5113E95EC8002918FD /* IPlugBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F78D8ED13B63BA40032E0F3 /* IPlugBase.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
@@ -185,7 +181,6 @@
 		4F8D4C2813E9778D004F7633 /* lice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F8D4BCC13E97664004F7633 /* lice.a */; };
 		4F8D4C2913E97794004F7633 /* lice32.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F8D4C1713E976A7004F7633 /* lice32.a */; };
 		4F8D4C2F13E97806004F7633 /* lice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F8D4BCC13E97664004F7633 /* lice.a */; };
-		4F9828B1140A9EB700F3FCC1 /* knob.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F23B9E413B647A00097A67E /* knob.png */; };
 		4F9828B6140A9EB700F3FCC1 /* Dolorean.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52FBBED00D0CF139001C8B8A /* Dolorean.cpp */; };
 		4F9828B7140A9EB700F3FCC1 /* swell-gdi.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4FD16D0B13B634BF001D0217 /* swell-gdi.mm */; settings = {COMPILER_FLAGS = "-w"; }; };
 		4F9828B8140A9EB700F3FCC1 /* IPlugBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F78D8ED13B63BA40032E0F3 /* IPlugBase.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
@@ -224,7 +219,6 @@
 		4F9828F6140A9EEE00F3FCC1 /* lice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F8D4BCC13E97664004F7633 /* lice.a */; };
 		4FA88B931444E4C4006CB8DA /* dfx-au-utilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FA88B911444E4C4006CB8DA /* dfx-au-utilities.h */; };
 		4FB3624F13B648FE00DB6B76 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4FB3624E13B648FE00DB6B76 /* main.mm */; settings = {COMPILER_FLAGS = "-w"; }; };
-		4FB600161567CB0A0020189A /* knob.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F23B9E413B647A00097A67E /* knob.png */; };
 		4FB600181567CB0A0020189A /* Dolorean.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52FBBED00D0CF139001C8B8A /* Dolorean.cpp */; };
 		4FB600191567CB0A0020189A /* swell-gdi.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4FD16D0B13B634BF001D0217 /* swell-gdi.mm */; settings = {COMPILER_FLAGS = "-w"; }; };
 		4FB6001A1567CB0A0020189A /* IPlugBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F78D8ED13B63BA40032E0F3 /* IPlugBase.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
@@ -275,6 +269,40 @@
 		4FF016F8134E14E2001447BA /* ptrlist.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FF016F5134E14E2001447BA /* ptrlist.h */; };
 		4FF016F9134E14E2001447BA /* wdlstring.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FF016F6134E14E2001447BA /* wdlstring.h */; };
 		4FF0171A134E153A001447BA /* heapbuf.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FF01719134E153A001447BA /* heapbuf.h */; };
+		A532F34B1CEE7C36007EA333 /* Oscillator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A532F3491CEE7C36007EA333 /* Oscillator.cpp */; };
+		A532F34C1CEE7C36007EA333 /* Oscillator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A532F3491CEE7C36007EA333 /* Oscillator.cpp */; };
+		A532F34D1CEE7C36007EA333 /* Oscillator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A532F3491CEE7C36007EA333 /* Oscillator.cpp */; };
+		A532F34E1CEE7C36007EA333 /* Oscillator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A532F3491CEE7C36007EA333 /* Oscillator.cpp */; };
+		A532F34F1CEE7C36007EA333 /* Oscillator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A532F3491CEE7C36007EA333 /* Oscillator.cpp */; };
+		A532F3501CEE7C36007EA333 /* Oscillator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A532F3491CEE7C36007EA333 /* Oscillator.cpp */; };
+		A532F3511CEE7C36007EA333 /* Oscillator.hpp in Headers */ = {isa = PBXBuildFile; fileRef = A532F34A1CEE7C36007EA333 /* Oscillator.hpp */; };
+		A532F3521CEE7C36007EA333 /* Oscillator.hpp in Headers */ = {isa = PBXBuildFile; fileRef = A532F34A1CEE7C36007EA333 /* Oscillator.hpp */; };
+		A532F3561CEE849E007EA333 /* MIDIReceiver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A532F3541CEE849E007EA333 /* MIDIReceiver.cpp */; };
+		A532F3571CEE849E007EA333 /* MIDIReceiver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A532F3541CEE849E007EA333 /* MIDIReceiver.cpp */; };
+		A532F3581CEE849E007EA333 /* MIDIReceiver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A532F3541CEE849E007EA333 /* MIDIReceiver.cpp */; };
+		A532F3591CEE849E007EA333 /* MIDIReceiver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A532F3541CEE849E007EA333 /* MIDIReceiver.cpp */; };
+		A532F35A1CEE849E007EA333 /* MIDIReceiver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A532F3541CEE849E007EA333 /* MIDIReceiver.cpp */; };
+		A532F35B1CEE849E007EA333 /* MIDIReceiver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A532F3541CEE849E007EA333 /* MIDIReceiver.cpp */; };
+		A532F35C1CEE849E007EA333 /* MIDIReceiver.hpp in Headers */ = {isa = PBXBuildFile; fileRef = A532F3551CEE849E007EA333 /* MIDIReceiver.hpp */; };
+		A532F35D1CEE849E007EA333 /* MIDIReceiver.hpp in Headers */ = {isa = PBXBuildFile; fileRef = A532F3551CEE849E007EA333 /* MIDIReceiver.hpp */; };
+		A532F3611CEE9FC8007EA333 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = A532F35E1CEE9FC8007EA333 /* bg.png */; };
+		A532F3621CEE9FC8007EA333 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = A532F35E1CEE9FC8007EA333 /* bg.png */; };
+		A532F3631CEE9FC8007EA333 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = A532F35E1CEE9FC8007EA333 /* bg.png */; };
+		A532F3641CEE9FC8007EA333 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = A532F35E1CEE9FC8007EA333 /* bg.png */; };
+		A532F3651CEE9FC8007EA333 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = A532F35E1CEE9FC8007EA333 /* bg.png */; };
+		A532F3661CEE9FC8007EA333 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = A532F35E1CEE9FC8007EA333 /* bg.png */; };
+		A532F3671CEE9FC8007EA333 /* blackkey.png in Resources */ = {isa = PBXBuildFile; fileRef = A532F35F1CEE9FC8007EA333 /* blackkey.png */; };
+		A532F3681CEE9FC8007EA333 /* blackkey.png in Resources */ = {isa = PBXBuildFile; fileRef = A532F35F1CEE9FC8007EA333 /* blackkey.png */; };
+		A532F3691CEE9FC8007EA333 /* blackkey.png in Resources */ = {isa = PBXBuildFile; fileRef = A532F35F1CEE9FC8007EA333 /* blackkey.png */; };
+		A532F36A1CEE9FC8007EA333 /* blackkey.png in Resources */ = {isa = PBXBuildFile; fileRef = A532F35F1CEE9FC8007EA333 /* blackkey.png */; };
+		A532F36B1CEE9FC8007EA333 /* blackkey.png in Resources */ = {isa = PBXBuildFile; fileRef = A532F35F1CEE9FC8007EA333 /* blackkey.png */; };
+		A532F36C1CEE9FC8007EA333 /* blackkey.png in Resources */ = {isa = PBXBuildFile; fileRef = A532F35F1CEE9FC8007EA333 /* blackkey.png */; };
+		A532F36D1CEE9FC8007EA333 /* whitekey.png in Resources */ = {isa = PBXBuildFile; fileRef = A532F3601CEE9FC8007EA333 /* whitekey.png */; };
+		A532F36E1CEE9FC8007EA333 /* whitekey.png in Resources */ = {isa = PBXBuildFile; fileRef = A532F3601CEE9FC8007EA333 /* whitekey.png */; };
+		A532F36F1CEE9FC8007EA333 /* whitekey.png in Resources */ = {isa = PBXBuildFile; fileRef = A532F3601CEE9FC8007EA333 /* whitekey.png */; };
+		A532F3701CEE9FC8007EA333 /* whitekey.png in Resources */ = {isa = PBXBuildFile; fileRef = A532F3601CEE9FC8007EA333 /* whitekey.png */; };
+		A532F3711CEE9FC8007EA333 /* whitekey.png in Resources */ = {isa = PBXBuildFile; fileRef = A532F3601CEE9FC8007EA333 /* whitekey.png */; };
+		A532F3721CEE9FC8007EA333 /* whitekey.png in Resources */ = {isa = PBXBuildFile; fileRef = A532F3601CEE9FC8007EA333 /* whitekey.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -442,7 +470,6 @@
 		4F017361154D4BFC0034BE1A /* AAX_CIPlugParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AAX_CIPlugParameters.h; path = ../../WDL/IPlug/AAX/AAX_CIPlugParameters.h; sourceTree = SOURCE_ROOT; };
 		4F1F1BE9135B1F60003A5BB2 /* wdlendian.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = wdlendian.h; path = ../../WDL/wdlendian.h; sourceTree = SOURCE_ROOT; };
 		4F20EF33132C69FE0030E34C /* Dolorean.vst */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Dolorean.vst; sourceTree = BUILT_PRODUCTS_DIR; };
-		4F23B9E413B647A00097A67E /* knob.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = knob.png; path = resources/img/knob.png; sourceTree = "<group>"; };
 		4F23BA1313B647E50097A67E /* Dolorean-AU-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Dolorean-AU-Info.plist"; path = "resources/Dolorean-AU-Info.plist"; sourceTree = "<group>"; };
 		4F23BA1413B647E50097A67E /* Dolorean-OSXAPP-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Dolorean-OSXAPP-Info.plist"; path = "resources/Dolorean-OSXAPP-Info.plist"; sourceTree = "<group>"; };
 		4F23BA1513B647E50097A67E /* Dolorean-VST2-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Dolorean-VST2-Info.plist"; path = "resources/Dolorean-VST2-Info.plist"; sourceTree = "<group>"; };
@@ -649,6 +676,13 @@
 		52FBBED00D0CF139001C8B8A /* Dolorean.cpp */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.cpp.cpp; path = Dolorean.cpp; sourceTree = "<group>"; tabWidth = 2; usesTabs = 0; };
 		52FBBED20D0CF13D001C8B8A /* Dolorean.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.h; path = Dolorean.h; sourceTree = "<group>"; tabWidth = 2; usesTabs = 0; };
 		52FBBED30D0CF143001C8B8A /* resource.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.h; path = resource.h; sourceTree = "<group>"; tabWidth = 2; usesTabs = 0; };
+		A532F3491CEE7C36007EA333 /* Oscillator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Oscillator.cpp; sourceTree = "<group>"; };
+		A532F34A1CEE7C36007EA333 /* Oscillator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Oscillator.hpp; sourceTree = "<group>"; };
+		A532F3541CEE849E007EA333 /* MIDIReceiver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MIDIReceiver.cpp; sourceTree = "<group>"; };
+		A532F3551CEE849E007EA333 /* MIDIReceiver.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MIDIReceiver.hpp; sourceTree = "<group>"; };
+		A532F35E1CEE9FC8007EA333 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
+		A532F35F1CEE9FC8007EA333 /* blackkey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackkey.png; sourceTree = "<group>"; };
+		A532F3601CEE9FC8007EA333 /* whitekey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whitekey.png; sourceTree = "<group>"; };
 		D2F7E65807B2D6F200F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
@@ -1250,7 +1284,9 @@
 		4FD16A0213B6303B001D0217 /* img */ = {
 			isa = PBXGroup;
 			children = (
-				4F23B9E413B647A00097A67E /* knob.png */,
+				A532F35E1CEE9FC8007EA333 /* bg.png */,
+				A532F35F1CEE9FC8007EA333 /* blackkey.png */,
+				A532F3601CEE9FC8007EA333 /* whitekey.png */,
 			);
 			name = img;
 			sourceTree = "<group>";
@@ -1346,6 +1382,8 @@
 		A532F3441CEE6FDE007EA333 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				A532F3531CEE848B007EA333 /* MIDI */,
+				A532F3481CEE7B06007EA333 /* Oscillator */,
 				52FBBED20D0CF13D001C8B8A /* Dolorean.h */,
 				52FBBED00D0CF139001C8B8A /* Dolorean.cpp */,
 			);
@@ -1373,6 +1411,24 @@
 			children = (
 			);
 			name = Disto;
+			sourceTree = "<group>";
+		};
+		A532F3481CEE7B06007EA333 /* Oscillator */ = {
+			isa = PBXGroup;
+			children = (
+				A532F3491CEE7C36007EA333 /* Oscillator.cpp */,
+				A532F34A1CEE7C36007EA333 /* Oscillator.hpp */,
+			);
+			name = Oscillator;
+			sourceTree = "<group>";
+		};
+		A532F3531CEE848B007EA333 /* MIDI */ = {
+			isa = PBXGroup;
+			children = (
+				A532F3541CEE849E007EA333 /* MIDIReceiver.cpp */,
+				A532F3551CEE849E007EA333 /* MIDIReceiver.hpp */,
+			);
+			name = MIDI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1403,10 +1459,12 @@
 				4F78D94613B63BA50032E0F3 /* IGraphicsMac.h in Headers */,
 				4F78D94913B63BA50032E0F3 /* Containers.h in Headers */,
 				4F78D94A13B63BA50032E0F3 /* Hosts.h in Headers */,
+				A532F3521CEE7C36007EA333 /* Oscillator.hpp in Headers */,
 				4F78D95113B63BA50032E0F3 /* IGraphicsCocoa.h in Headers */,
 				4F78D95213B63BA50032E0F3 /* Log.h in Headers */,
 				4F78D95413B63BA50032E0F3 /* IPopupMenu.h in Headers */,
 				4F78D95613B63BA50032E0F3 /* IPlugStructs.h in Headers */,
+				A532F35D1CEE849E007EA333 /* MIDIReceiver.hpp in Headers */,
 				4F78D95A13B63BA50032E0F3 /* IPlug_Prefix.pch in Headers */,
 				4F78D95B13B63BA50032E0F3 /* IParam.h in Headers */,
 				4F78D95D13B63BA50032E0F3 /* IMidiQueue.h in Headers */,
@@ -1439,6 +1497,7 @@
 				4F78DA8E13B640050032E0F3 /* wdlendian.h in Headers */,
 				4F78DA8F13B640050032E0F3 /* swell.h in Headers */,
 				4F78DA9013B640050032E0F3 /* swell-functions.h in Headers */,
+				A532F3511CEE7C36007EA333 /* Oscillator.hpp in Headers */,
 				4F78DA9113B640050032E0F3 /* swell-internal.h in Headers */,
 				4F78DA9213B640050032E0F3 /* swell-types.h in Headers */,
 				4F78DA9313B640050032E0F3 /* aeffect.h in Headers */,
@@ -1450,6 +1509,7 @@
 				4F78DA9913B640050032E0F3 /* IPlugBase.h in Headers */,
 				4F78DA9A13B640050032E0F3 /* IGraphicsMac.h in Headers */,
 				4F78DA9C13B640050032E0F3 /* Containers.h in Headers */,
+				A532F35C1CEE849E007EA333 /* MIDIReceiver.hpp in Headers */,
 				4F78DA9D13B640050032E0F3 /* Hosts.h in Headers */,
 				4F78DA9E13B640050032E0F3 /* IGraphicsCocoa.h in Headers */,
 				4F78DA9F13B640050032E0F3 /* Log.h in Headers */,
@@ -1697,7 +1757,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F23B9F313B647A00097A67E /* knob.png in Resources */,
+				A532F3621CEE9FC8007EA333 /* bg.png in Resources */,
+				A532F3681CEE9FC8007EA333 /* blackkey.png in Resources */,
+				A532F36E1CEE9FC8007EA333 /* whitekey.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1705,7 +1767,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F23BA0C13B647A00097A67E /* knob.png in Resources */,
+				A532F3641CEE9FC8007EA333 /* bg.png in Resources */,
+				A532F36A1CEE9FC8007EA333 /* blackkey.png in Resources */,
+				A532F3701CEE9FC8007EA333 /* whitekey.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1713,7 +1777,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F7F5C4613E95EC8002918FD /* knob.png in Resources */,
+				A532F3651CEE9FC8007EA333 /* bg.png in Resources */,
+				A532F36B1CEE9FC8007EA333 /* blackkey.png in Resources */,
+				A532F3711CEE9FC8007EA333 /* whitekey.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1721,7 +1787,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F9828B1140A9EB700F3FCC1 /* knob.png in Resources */,
+				A532F3631CEE9FC8007EA333 /* bg.png in Resources */,
+				A532F3691CEE9FC8007EA333 /* blackkey.png in Resources */,
+				A532F36F1CEE9FC8007EA333 /* whitekey.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1729,7 +1797,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4FB600161567CB0A0020189A /* knob.png in Resources */,
+				A532F3661CEE9FC8007EA333 /* bg.png in Resources */,
+				A532F36C1CEE9FC8007EA333 /* blackkey.png in Resources */,
+				A532F3721CEE9FC8007EA333 /* whitekey.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1739,8 +1809,10 @@
 			files = (
 				4F78D88613B6382B0032E0F3 /* Dolorean.icns in Resources */,
 				4F78D89913B639100032E0F3 /* InfoPlist.strings in Resources */,
+				A532F3611CEE9FC8007EA333 /* bg.png in Resources */,
+				A532F3671CEE9FC8007EA333 /* blackkey.png in Resources */,
 				4F78D89A13B639100032E0F3 /* MainMenu.xib in Resources */,
-				4F23B9FD13B647A00097A67E /* knob.png in Resources */,
+				A532F36D1CEE9FC8007EA333 /* whitekey.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1799,10 +1871,12 @@
 				4F78D9C213B63BA50032E0F3 /* IGraphicsCocoa.mm in Sources */,
 				4F78D9C313B63BA50032E0F3 /* Log.cpp in Sources */,
 				4F78D9C413B63BA50032E0F3 /* IPopupMenu.cpp in Sources */,
+				A532F34C1CEE7C36007EA333 /* Oscillator.cpp in Sources */,
 				4F78D9C813B63BA50032E0F3 /* IParam.cpp in Sources */,
 				4F78D9C913B63BA50032E0F3 /* IControl.cpp in Sources */,
 				4F78D9F313B63C6A0032E0F3 /* IPlugVST.cpp in Sources */,
 				4FDA440C13F3E4F2000B4551 /* IBitmapMonoText.cpp in Sources */,
+				A532F3571CEE849E007EA333 /* MIDIReceiver.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1815,10 +1889,12 @@
 				4F78D94513B63BA50032E0F3 /* IPlugBase.cpp in Sources */,
 				4F78D94713B63BA50032E0F3 /* IPlugStructs.cpp in Sources */,
 				4F78D94B13B63BA50032E0F3 /* Hosts.cpp in Sources */,
+				A532F34E1CEE7C36007EA333 /* Oscillator.cpp in Sources */,
 				4F78D94D13B63BA50032E0F3 /* IGraphicsMac.mm in Sources */,
 				4F78D94E13B63BA50032E0F3 /* IGraphics.cpp in Sources */,
 				4F78D94F13B63BA50032E0F3 /* IGraphicsCarbon.cpp in Sources */,
 				4F78D95013B63BA50032E0F3 /* IGraphicsCocoa.mm in Sources */,
+				A532F3591CEE849E007EA333 /* MIDIReceiver.cpp in Sources */,
 				4F78D95313B63BA50032E0F3 /* Log.cpp in Sources */,
 				4F78D95513B63BA50032E0F3 /* IPopupMenu.cpp in Sources */,
 				4F78D95C13B63BA50032E0F3 /* IParam.cpp in Sources */,
@@ -1845,6 +1921,7 @@
 				4F7F5C5713E95EC8002918FD /* IGraphicsCocoa.mm in Sources */,
 				4F7F5C5813E95EC8002918FD /* Log.cpp in Sources */,
 				4F7F5C5913E95EC8002918FD /* IPopupMenu.cpp in Sources */,
+				A532F34F1CEE7C36007EA333 /* Oscillator.cpp in Sources */,
 				4F7F5C5A13E95EC8002918FD /* IParam.cpp in Sources */,
 				4F7F5C5B13E95EC8002918FD /* IControl.cpp in Sources */,
 				4F7F5C7113E95FB2002918FD /* IPlugRTAS.cpp in Sources */,
@@ -1856,6 +1933,7 @@
 				4F7F5CB213E9607A002918FD /* IPlugProcess.cpp in Sources */,
 				4F7F5CB313E9607A002918FD /* IPlugProcessRTAS.cpp in Sources */,
 				4FDA440713F3E4F2000B4551 /* IBitmapMonoText.cpp in Sources */,
+				A532F35A1CEE849E007EA333 /* MIDIReceiver.cpp in Sources */,
 				4F79A34E146304CD00744AED /* IPlugProcessAS.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1890,12 +1968,14 @@
 				4F9828CE140A9EB700F3FCC1 /* vstinitiids.cpp in Sources */,
 				4F9828CF140A9EB700F3FCC1 /* vstnoteexpressiontypes.cpp in Sources */,
 				4F9828D0140A9EB700F3FCC1 /* vstparameters.cpp in Sources */,
+				A532F34D1CEE7C36007EA333 /* Oscillator.cpp in Sources */,
 				4F9828D1140A9EB700F3FCC1 /* vstpresetfile.cpp in Sources */,
 				4F9828D2140A9EB700F3FCC1 /* vstrepresentation.cpp in Sources */,
 				4F9828D3140A9EB700F3FCC1 /* vstsinglecomponenteffect.cpp in Sources */,
 				4F9828D4140A9EB700F3FCC1 /* conststringtable.cpp in Sources */,
 				4F9828D5140A9EB700F3FCC1 /* funknown.cpp in Sources */,
 				4F9828D6140A9EB700F3FCC1 /* ustring.cpp in Sources */,
+				A532F3581CEE849E007EA333 /* MIDIReceiver.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1916,10 +1996,12 @@
 				4FB600221567CB0A0020189A /* IPopupMenu.cpp in Sources */,
 				4FB600231567CB0A0020189A /* IParam.cpp in Sources */,
 				4FB600241567CB0A0020189A /* IControl.cpp in Sources */,
+				A532F35B1CEE849E007EA333 /* MIDIReceiver.cpp in Sources */,
 				4FB600251567CB0A0020189A /* IBitmapMonoText.cpp in Sources */,
 				4FB600261567CB0A0020189A /* AAX_Exports.cpp in Sources */,
 				4FB600271567CB0A0020189A /* IPlugAAX.cpp in Sources */,
 				4FB600281567CB0A0020189A /* IPlugAAX_Describe.cpp in Sources */,
+				A532F3501CEE7C36007EA333 /* Oscillator.cpp in Sources */,
 				4FB600291567CB0A0020189A /* AAX_CIPlugParameters.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1953,11 +2035,13 @@
 				4F78D91413B63BA50032E0F3 /* IPopupMenu.cpp in Sources */,
 				4F78D91813B63BA50032E0F3 /* IParam.cpp in Sources */,
 				4F78D91913B63BA50032E0F3 /* IControl.cpp in Sources */,
+				A532F3561CEE849E007EA333 /* MIDIReceiver.cpp in Sources */,
 				4F78DA5A13B63F150032E0F3 /* Dolorean.cpp in Sources */,
 				4FD16CA213B6327D001D0217 /* app_main.cpp in Sources */,
 				4FD16CA313B6327D001D0217 /* app_dialog.cpp in Sources */,
 				4FB3624F13B648FE00DB6B76 /* main.mm in Sources */,
 				4FDA440E13F3E4F2000B4551 /* IBitmapMonoText.cpp in Sources */,
+				A532F34B1CEE7C36007EA333 /* Oscillator.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
