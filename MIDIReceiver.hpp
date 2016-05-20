@@ -15,6 +15,9 @@
 
 #include "IMidiQueue.h"
 
+#define tamere      pute
+
+
 class MIDIReceiver {
     static constexpr int k_keyCount = 128;
 
