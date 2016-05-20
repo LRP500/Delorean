@@ -8,8 +8,6 @@
 
 #pragma once
 
-#include <array>
-
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wextra-tokens"
 #include "IPlug_include_in_plug_hdr.h"
@@ -43,7 +41,7 @@ protected:
 private:
     IMidiQueue                      _midiQueue;
     int                             _numKeys            = 0;    // how many keys are being played at the moment (via midi)
-    std::array<bool, k_keyCount>    _keyStatus;                 // array of on/off for each key (index is note number)
+    bool                            _keyStatus[k_keyCount];     // array of on/off for each key (index is note number)
     int                             _lastNoteNumber     = -1;
     double                          _lastFrequency      = -1.0;
     int                             _lastVelocity       = 0;
