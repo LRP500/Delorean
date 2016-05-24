@@ -24,6 +24,7 @@ void Oscillator::setFrequency(double frequency) {
 
 void Oscillator::setSampleRate(double sampleRate) {
     this->_sampleRate = sampleRate;
+    this->_generator.setSampleRate(sampleRate);
     this->updateIncrement();
 }
 
@@ -100,10 +101,17 @@ double Oscillator::nextSample() {
             value = -1.0 + (2.0 * this->_phase / k_2PI);
             value = 2.0 * (fabs(value) - 0.5);
             break;
+        default:
+            break;
     }
     this->_phase += this->_phaseIncrement;
     while (this->_phase >= k_2PI) {
         this->_phase -= k_2PI;
     }
-    return value;
+
+    return value * _generator.nextSample();
+}
+
+void Oscillator::setEnveloppeStageValue(EnvelopeGenerator::Stage stage, double value) {
+    _generator.setStageValue(stage, value);
 }

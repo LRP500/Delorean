@@ -8,6 +8,11 @@ const int kNumPrograms = 1;
 
 enum EParams
 {
+  mWaveform = 0,
+  mAttack,
+  mDecay,
+  mSustain,
+  mRelease,
   kNumParams
 };
 
@@ -16,7 +21,7 @@ enum ELayout
   kWidth = GUI_WIDTH,
   kHeight = GUI_HEIGHT,
   kKeybX = 1,
-  kKeybY = 0
+  kKeybY = 230
 };
 
 Dolorean::Dolorean(IPlugInstanceInfo instanceInfo)
@@ -35,8 +40,36 @@ Dolorean::Dolorean(IPlugInstanceInfo instanceInfo)
 
   pGraphics->AttachControl(_virtualKeyboard);
 
+  GetParam(mWaveform)->InitEnum("Waveform", static_cast<size_t>(Oscillator::Mode::Sine), static_cast<size_t>(Oscillator::Mode::kNumModes));
+  GetParam(mWaveform)->SetDisplayText(0, "Sine");
+
+  IBitmap waveformBitmap = pGraphics->LoadIBitmap(WAVEFORM_ID, WAVEFORM_FN, 4);
+  pGraphics->AttachControl(new ISwitchControl(this, 24, 53, mWaveform, &waveformBitmap));
+
+  // Knob bitmap for ADSR
+  IBitmap knobBitmap = pGraphics->LoadIBitmap(KNOB_ID, KNOB_FN, 64);
+  // Attack knob:
+  GetParam(mAttack)->InitDouble("Attack", 0.01, 0.01, 10.0, 0.001);
+  GetParam(mAttack)->SetShape(3);
+  pGraphics->AttachControl(new IKnobMultiControl(this, 95, 34, mAttack, &knobBitmap));
+  // Decay knob:
+  GetParam(mDecay)->InitDouble("Decay", 0.5, 0.01, 15.0, 0.001);
+  GetParam(mDecay)->SetShape(3);
+  pGraphics->AttachControl(new IKnobMultiControl(this, 177, 34, mDecay, &knobBitmap));
+  // Sustain knob:
+  GetParam(mSustain)->InitDouble("Sustain", 0.1, 0.001, 1.0, 0.001);
+  GetParam(mSustain)->SetShape(2);
+  pGraphics->AttachControl(new IKnobMultiControl(this, 259, 34, mSustain, &knobBitmap));
+  // Release knob:
+  GetParam(mRelease)->InitDouble("Release", 1.0, 0.001, 15.0, 0.001);
+  GetParam(mRelease)->SetShape(3);
+  pGraphics->AttachControl(new IKnobMultiControl(this, 341, 34, mRelease, &knobBitmap));
+
   AttachGraphics(pGraphics);
   MakeDefaultPreset((char *) "-", kNumPrograms);
+
+  _MIDIReceiver.setHandler(MIDIReceiver::Handler::KeyPressed, std::bind(&Oscillator::onNoteOn, &_oscillator, std::placeholders::_1, std::placeholders::_2));
+  _MIDIReceiver.setHandler(MIDIReceiver::Handler::KeyReleased, std::bind(&Oscillator::onNoteOff, &_oscillator, std::placeholders::_1, std::placeholders::_2));
 }
 
 Dolorean::~Dolorean() {}
@@ -58,6 +91,7 @@ void Dolorean::ProcessDoubleReplacing(double** inputs, double** outputs, int nFr
     } else {
       this->_oscillator.setMute(true);
     }
+
     leftOutput[i] = rightOutput[i] = this->_oscillator.nextSample() * velocity / 127.0;
   }
 
@@ -73,7 +107,17 @@ void Dolorean::Reset() {
 
 void Dolorean::OnParamChange(int paramIdx) {
   IMutexLock lock(this);
-
+  switch(paramIdx) {
+    case mWaveform:
+      _oscillator.setMode(static_cast<Oscillator::Mode>(GetParam(mWaveform)->Int()));
+      break;
+    case mAttack:
+    case mDecay:
+    case mSustain:
+    case mRelease:
+      _oscillator.setEnveloppeStageValue(static_cast<EnvelopeGenerator::Stage>(paramIdx), GetParam(paramIdx)->Value());
+      break;
+  }
 }
 
 void Dolorean::ProcessMidiMsg(IMidiMsg* pMsg) {

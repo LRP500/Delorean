@@ -285,12 +285,6 @@
 		A532F35B1CEE849E007EA333 /* MIDIReceiver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A532F3541CEE849E007EA333 /* MIDIReceiver.cpp */; };
 		A532F35C1CEE849E007EA333 /* MIDIReceiver.hpp in Headers */ = {isa = PBXBuildFile; fileRef = A532F3551CEE849E007EA333 /* MIDIReceiver.hpp */; };
 		A532F35D1CEE849E007EA333 /* MIDIReceiver.hpp in Headers */ = {isa = PBXBuildFile; fileRef = A532F3551CEE849E007EA333 /* MIDIReceiver.hpp */; };
-		A532F3611CEE9FC8007EA333 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = A532F35E1CEE9FC8007EA333 /* bg.png */; };
-		A532F3621CEE9FC8007EA333 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = A532F35E1CEE9FC8007EA333 /* bg.png */; };
-		A532F3631CEE9FC8007EA333 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = A532F35E1CEE9FC8007EA333 /* bg.png */; };
-		A532F3641CEE9FC8007EA333 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = A532F35E1CEE9FC8007EA333 /* bg.png */; };
-		A532F3651CEE9FC8007EA333 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = A532F35E1CEE9FC8007EA333 /* bg.png */; };
-		A532F3661CEE9FC8007EA333 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = A532F35E1CEE9FC8007EA333 /* bg.png */; };
 		A532F3671CEE9FC8007EA333 /* blackkey.png in Resources */ = {isa = PBXBuildFile; fileRef = A532F35F1CEE9FC8007EA333 /* blackkey.png */; };
 		A532F3681CEE9FC8007EA333 /* blackkey.png in Resources */ = {isa = PBXBuildFile; fileRef = A532F35F1CEE9FC8007EA333 /* blackkey.png */; };
 		A532F3691CEE9FC8007EA333 /* blackkey.png in Resources */ = {isa = PBXBuildFile; fileRef = A532F35F1CEE9FC8007EA333 /* blackkey.png */; };
@@ -303,6 +297,32 @@
 		A532F3701CEE9FC8007EA333 /* whitekey.png in Resources */ = {isa = PBXBuildFile; fileRef = A532F3601CEE9FC8007EA333 /* whitekey.png */; };
 		A532F3711CEE9FC8007EA333 /* whitekey.png in Resources */ = {isa = PBXBuildFile; fileRef = A532F3601CEE9FC8007EA333 /* whitekey.png */; };
 		A532F3721CEE9FC8007EA333 /* whitekey.png in Resources */ = {isa = PBXBuildFile; fileRef = A532F3601CEE9FC8007EA333 /* whitekey.png */; };
+		A532F3751CEF3375007EA333 /* EnvelopeGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A532F3731CEF3375007EA333 /* EnvelopeGenerator.cpp */; };
+		A532F3761CEF3375007EA333 /* EnvelopeGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A532F3731CEF3375007EA333 /* EnvelopeGenerator.cpp */; };
+		A532F3771CEF3375007EA333 /* EnvelopeGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A532F3731CEF3375007EA333 /* EnvelopeGenerator.cpp */; };
+		A532F3781CEF3375007EA333 /* EnvelopeGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A532F3731CEF3375007EA333 /* EnvelopeGenerator.cpp */; };
+		A532F3791CEF3375007EA333 /* EnvelopeGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A532F3731CEF3375007EA333 /* EnvelopeGenerator.cpp */; };
+		A532F37A1CEF3375007EA333 /* EnvelopeGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A532F3731CEF3375007EA333 /* EnvelopeGenerator.cpp */; };
+		A532F37B1CEF3375007EA333 /* EnvelopeGenerator.hpp in Headers */ = {isa = PBXBuildFile; fileRef = A532F3741CEF3375007EA333 /* EnvelopeGenerator.hpp */; };
+		A532F37C1CEF3375007EA333 /* EnvelopeGenerator.hpp in Headers */ = {isa = PBXBuildFile; fileRef = A532F3741CEF3375007EA333 /* EnvelopeGenerator.hpp */; };
+		A532F37E1CEF60E6007EA333 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = A532F37D1CEF60E6007EA333 /* bg.png */; };
+		A532F37F1CEF60E6007EA333 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = A532F37D1CEF60E6007EA333 /* bg.png */; };
+		A532F3801CEF60E6007EA333 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = A532F37D1CEF60E6007EA333 /* bg.png */; };
+		A532F3811CEF60E6007EA333 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = A532F37D1CEF60E6007EA333 /* bg.png */; };
+		A532F3821CEF60E6007EA333 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = A532F37D1CEF60E6007EA333 /* bg.png */; };
+		A532F3831CEF60E6007EA333 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = A532F37D1CEF60E6007EA333 /* bg.png */; };
+		A532F3851CEF60ED007EA333 /* knob.png in Resources */ = {isa = PBXBuildFile; fileRef = A532F3841CEF60ED007EA333 /* knob.png */; };
+		A532F3861CEF60ED007EA333 /* knob.png in Resources */ = {isa = PBXBuildFile; fileRef = A532F3841CEF60ED007EA333 /* knob.png */; };
+		A532F3871CEF60ED007EA333 /* knob.png in Resources */ = {isa = PBXBuildFile; fileRef = A532F3841CEF60ED007EA333 /* knob.png */; };
+		A532F3881CEF60ED007EA333 /* knob.png in Resources */ = {isa = PBXBuildFile; fileRef = A532F3841CEF60ED007EA333 /* knob.png */; };
+		A532F3891CEF60ED007EA333 /* knob.png in Resources */ = {isa = PBXBuildFile; fileRef = A532F3841CEF60ED007EA333 /* knob.png */; };
+		A532F38A1CEF60ED007EA333 /* knob.png in Resources */ = {isa = PBXBuildFile; fileRef = A532F3841CEF60ED007EA333 /* knob.png */; };
+		A532F38C1CEF60F4007EA333 /* waveform.png in Resources */ = {isa = PBXBuildFile; fileRef = A532F38B1CEF60F4007EA333 /* waveform.png */; };
+		A532F38D1CEF60F4007EA333 /* waveform.png in Resources */ = {isa = PBXBuildFile; fileRef = A532F38B1CEF60F4007EA333 /* waveform.png */; };
+		A532F38E1CEF60F4007EA333 /* waveform.png in Resources */ = {isa = PBXBuildFile; fileRef = A532F38B1CEF60F4007EA333 /* waveform.png */; };
+		A532F38F1CEF60F4007EA333 /* waveform.png in Resources */ = {isa = PBXBuildFile; fileRef = A532F38B1CEF60F4007EA333 /* waveform.png */; };
+		A532F3901CEF60F4007EA333 /* waveform.png in Resources */ = {isa = PBXBuildFile; fileRef = A532F38B1CEF60F4007EA333 /* waveform.png */; };
+		A532F3911CEF60F4007EA333 /* waveform.png in Resources */ = {isa = PBXBuildFile; fileRef = A532F38B1CEF60F4007EA333 /* waveform.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -680,9 +700,13 @@
 		A532F34A1CEE7C36007EA333 /* Oscillator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Oscillator.hpp; sourceTree = "<group>"; };
 		A532F3541CEE849E007EA333 /* MIDIReceiver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MIDIReceiver.cpp; sourceTree = "<group>"; };
 		A532F3551CEE849E007EA333 /* MIDIReceiver.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MIDIReceiver.hpp; sourceTree = "<group>"; };
-		A532F35E1CEE9FC8007EA333 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
 		A532F35F1CEE9FC8007EA333 /* blackkey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackkey.png; sourceTree = "<group>"; };
 		A532F3601CEE9FC8007EA333 /* whitekey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whitekey.png; sourceTree = "<group>"; };
+		A532F3731CEF3375007EA333 /* EnvelopeGenerator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EnvelopeGenerator.cpp; sourceTree = "<group>"; };
+		A532F3741CEF3375007EA333 /* EnvelopeGenerator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = EnvelopeGenerator.hpp; sourceTree = "<group>"; };
+		A532F37D1CEF60E6007EA333 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
+		A532F3841CEF60ED007EA333 /* knob.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = knob.png; sourceTree = "<group>"; };
+		A532F38B1CEF60F4007EA333 /* waveform.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = waveform.png; sourceTree = "<group>"; };
 		D2F7E65807B2D6F200F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
@@ -1284,7 +1308,9 @@
 		4FD16A0213B6303B001D0217 /* img */ = {
 			isa = PBXGroup;
 			children = (
-				A532F35E1CEE9FC8007EA333 /* bg.png */,
+				A532F38B1CEF60F4007EA333 /* waveform.png */,
+				A532F3841CEF60ED007EA333 /* knob.png */,
+				A532F37D1CEF60E6007EA333 /* bg.png */,
 				A532F35F1CEE9FC8007EA333 /* blackkey.png */,
 				A532F3601CEE9FC8007EA333 /* whitekey.png */,
 			);
@@ -1418,6 +1444,8 @@
 			children = (
 				A532F3491CEE7C36007EA333 /* Oscillator.cpp */,
 				A532F34A1CEE7C36007EA333 /* Oscillator.hpp */,
+				A532F3731CEF3375007EA333 /* EnvelopeGenerator.cpp */,
+				A532F3741CEF3375007EA333 /* EnvelopeGenerator.hpp */,
 			);
 			name = Oscillator;
 			sourceTree = "<group>";
@@ -1450,6 +1478,7 @@
 				4F78D8D913B63B5D0032E0F3 /* aeffect.h in Headers */,
 				4F78D8DA13B63B5D0032E0F3 /* aeffectx.h in Headers */,
 				4FF0171A134E153A001447BA /* heapbuf.h in Headers */,
+				A532F37C1CEF3375007EA333 /* EnvelopeGenerator.hpp in Headers */,
 				4F1F1BEA135B1F60003A5BB2 /* wdlendian.h in Headers */,
 				4F78D93E13B63BA50032E0F3 /* IPlug_include_in_plug_hdr.h in Headers */,
 				4F78D94013B63BA50032E0F3 /* IPlug_include_in_plug_src.h in Headers */,
@@ -1491,6 +1520,7 @@
 				4F78DA7713B640050032E0F3 /* resource.h in Headers */,
 				4F78DA7813B640050032E0F3 /* Dolorean.h in Headers */,
 				4F78DA8A13B640050032E0F3 /* mutex.h in Headers */,
+				A532F37B1CEF3375007EA333 /* EnvelopeGenerator.hpp in Headers */,
 				4F78DA8B13B640050032E0F3 /* ptrlist.h in Headers */,
 				4F78DA8C13B640050032E0F3 /* wdlstring.h in Headers */,
 				4F78DA8D13B640050032E0F3 /* heapbuf.h in Headers */,
@@ -1757,9 +1787,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A532F3621CEE9FC8007EA333 /* bg.png in Resources */,
 				A532F3681CEE9FC8007EA333 /* blackkey.png in Resources */,
+				A532F38D1CEF60F4007EA333 /* waveform.png in Resources */,
+				A532F3861CEF60ED007EA333 /* knob.png in Resources */,
 				A532F36E1CEE9FC8007EA333 /* whitekey.png in Resources */,
+				A532F37F1CEF60E6007EA333 /* bg.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1767,9 +1799,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A532F3641CEE9FC8007EA333 /* bg.png in Resources */,
 				A532F36A1CEE9FC8007EA333 /* blackkey.png in Resources */,
+				A532F38F1CEF60F4007EA333 /* waveform.png in Resources */,
+				A532F3881CEF60ED007EA333 /* knob.png in Resources */,
 				A532F3701CEE9FC8007EA333 /* whitekey.png in Resources */,
+				A532F3811CEF60E6007EA333 /* bg.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1777,9 +1811,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A532F3651CEE9FC8007EA333 /* bg.png in Resources */,
 				A532F36B1CEE9FC8007EA333 /* blackkey.png in Resources */,
+				A532F3901CEF60F4007EA333 /* waveform.png in Resources */,
+				A532F3891CEF60ED007EA333 /* knob.png in Resources */,
 				A532F3711CEE9FC8007EA333 /* whitekey.png in Resources */,
+				A532F3821CEF60E6007EA333 /* bg.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1787,9 +1823,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A532F3631CEE9FC8007EA333 /* bg.png in Resources */,
 				A532F3691CEE9FC8007EA333 /* blackkey.png in Resources */,
+				A532F38E1CEF60F4007EA333 /* waveform.png in Resources */,
+				A532F3871CEF60ED007EA333 /* knob.png in Resources */,
 				A532F36F1CEE9FC8007EA333 /* whitekey.png in Resources */,
+				A532F3801CEF60E6007EA333 /* bg.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1797,9 +1835,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A532F3661CEE9FC8007EA333 /* bg.png in Resources */,
 				A532F36C1CEE9FC8007EA333 /* blackkey.png in Resources */,
+				A532F3911CEF60F4007EA333 /* waveform.png in Resources */,
+				A532F38A1CEF60ED007EA333 /* knob.png in Resources */,
 				A532F3721CEE9FC8007EA333 /* whitekey.png in Resources */,
+				A532F3831CEF60E6007EA333 /* bg.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1809,9 +1849,11 @@
 			files = (
 				4F78D88613B6382B0032E0F3 /* Dolorean.icns in Resources */,
 				4F78D89913B639100032E0F3 /* InfoPlist.strings in Resources */,
-				A532F3611CEE9FC8007EA333 /* bg.png in Resources */,
+				A532F3851CEF60ED007EA333 /* knob.png in Resources */,
+				A532F37E1CEF60E6007EA333 /* bg.png in Resources */,
 				A532F3671CEE9FC8007EA333 /* blackkey.png in Resources */,
 				4F78D89A13B639100032E0F3 /* MainMenu.xib in Resources */,
+				A532F38C1CEF60F4007EA333 /* waveform.png in Resources */,
 				A532F36D1CEE9FC8007EA333 /* whitekey.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1873,6 +1915,7 @@
 				4F78D9C413B63BA50032E0F3 /* IPopupMenu.cpp in Sources */,
 				A532F34C1CEE7C36007EA333 /* Oscillator.cpp in Sources */,
 				4F78D9C813B63BA50032E0F3 /* IParam.cpp in Sources */,
+				A532F3761CEF3375007EA333 /* EnvelopeGenerator.cpp in Sources */,
 				4F78D9C913B63BA50032E0F3 /* IControl.cpp in Sources */,
 				4F78D9F313B63C6A0032E0F3 /* IPlugVST.cpp in Sources */,
 				4FDA440C13F3E4F2000B4551 /* IBitmapMonoText.cpp in Sources */,
@@ -1891,6 +1934,7 @@
 				4F78D94B13B63BA50032E0F3 /* Hosts.cpp in Sources */,
 				A532F34E1CEE7C36007EA333 /* Oscillator.cpp in Sources */,
 				4F78D94D13B63BA50032E0F3 /* IGraphicsMac.mm in Sources */,
+				A532F3781CEF3375007EA333 /* EnvelopeGenerator.cpp in Sources */,
 				4F78D94E13B63BA50032E0F3 /* IGraphics.cpp in Sources */,
 				4F78D94F13B63BA50032E0F3 /* IGraphicsCarbon.cpp in Sources */,
 				4F78D95013B63BA50032E0F3 /* IGraphicsCocoa.mm in Sources */,
@@ -1921,6 +1965,7 @@
 				4F7F5C5713E95EC8002918FD /* IGraphicsCocoa.mm in Sources */,
 				4F7F5C5813E95EC8002918FD /* Log.cpp in Sources */,
 				4F7F5C5913E95EC8002918FD /* IPopupMenu.cpp in Sources */,
+				A532F3791CEF3375007EA333 /* EnvelopeGenerator.cpp in Sources */,
 				A532F34F1CEE7C36007EA333 /* Oscillator.cpp in Sources */,
 				4F7F5C5A13E95EC8002918FD /* IParam.cpp in Sources */,
 				4F7F5C5B13E95EC8002918FD /* IControl.cpp in Sources */,
@@ -1954,6 +1999,7 @@
 				4F9828BF140A9EB700F3FCC1 /* Log.cpp in Sources */,
 				4F9828C0140A9EB700F3FCC1 /* IPopupMenu.cpp in Sources */,
 				4F9828C1140A9EB700F3FCC1 /* IParam.cpp in Sources */,
+				A532F3771CEF3375007EA333 /* EnvelopeGenerator.cpp in Sources */,
 				4F9828C2140A9EB700F3FCC1 /* IControl.cpp in Sources */,
 				4F9828C3140A9EB700F3FCC1 /* IBitmapMonoText.cpp in Sources */,
 				4F9828C4140A9EB700F3FCC1 /* IPlugVST3.cpp in Sources */,
@@ -2002,6 +2048,7 @@
 				4FB600271567CB0A0020189A /* IPlugAAX.cpp in Sources */,
 				4FB600281567CB0A0020189A /* IPlugAAX_Describe.cpp in Sources */,
 				A532F3501CEE7C36007EA333 /* Oscillator.cpp in Sources */,
+				A532F37A1CEF3375007EA333 /* EnvelopeGenerator.cpp in Sources */,
 				4FB600291567CB0A0020189A /* AAX_CIPlugParameters.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2035,6 +2082,7 @@
 				4F78D91413B63BA50032E0F3 /* IPopupMenu.cpp in Sources */,
 				4F78D91813B63BA50032E0F3 /* IParam.cpp in Sources */,
 				4F78D91913B63BA50032E0F3 /* IControl.cpp in Sources */,
+				A532F3751CEF3375007EA333 /* EnvelopeGenerator.cpp in Sources */,
 				A532F3561CEE849E007EA333 /* MIDIReceiver.cpp in Sources */,
 				4F78DA5A13B63F150032E0F3 /* Dolorean.cpp in Sources */,
 				4FD16CA213B6327D001D0217 /* app_main.cpp in Sources */,

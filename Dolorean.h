@@ -7,6 +7,8 @@
 #include "Oscillator.hpp"
 #include "MIDIReceiver.hpp"
 
+#include <vector>
+
 class Dolorean : public IPlug
 {
   static constexpr int k_virtualKeyboardMinimumNoteNumber = 48;

@@ -13,15 +13,19 @@
 #include "IPlug_include_in_plug_hdr.h"
 #pragma clang diagnostic pop
 
+#include <functional>
 #include "IMidiQueue.h"
-
-#define tamere      pute
-
 
 class MIDIReceiver {
     static constexpr int k_keyCount = 128;
 
 public:
+    using KeyHandler = std::function<void (int, int)>;
+    enum class Handler: size_t {
+        KeyPressed = 0,
+        KeyReleased
+    };
+
     MIDIReceiver();
 
 public:
@@ -35,6 +39,7 @@ public:
     inline int getLastVelocity() const { return _lastVelocity; }
     inline void Flush(int nFrames) { this->_midiQueue.Flush(nFrames); _offset = 0; }
     inline void Resize(int blockSize) { this->_midiQueue.Resize(blockSize); }
+    void setHandler(Handler, std::function<void (int, int)> &&);
 
 protected:
     inline double       noteNumberToFrequency(int noteNumber)
@@ -49,5 +54,6 @@ private:
     double                          _lastFrequency      = -1.0;
     int                             _lastVelocity       = 0;
     int                             _offset             = 0;
+    KeyHandler                      _keyHandlers[2];
 
 };
