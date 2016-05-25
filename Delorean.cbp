@@ -2,17 +2,17 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="Dolorean" />
+		<Option title="Delorean" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug Win32">
-				<Option output="build-win-cb/Dolorean" prefix_auto="1" extension_auto="1" />
+				<Option output="build-win-cb/Delorean" prefix_auto="1" extension_auto="1" />
 				<Option working_dir="build-win-cb/" />
 				<Option object_output="build-win-cb/Debug/" />
 				<Option type="3" />
 				<Option compiler="gcc" />
-				<Option parameters="Dolorean.dll" />
+				<Option parameters="Delorean.dll" />
 				<Option host_application="C:/Program Files/vsthost/vsthost.exe" />
 				<Option run_host_application_in_terminal="0" />
 				<Compiler>
@@ -29,12 +29,12 @@
 				</Compiler>
 			</Target>
 			<Target title="Release Win32">
-				<Option output="build-win-cb/Dolorean" prefix_auto="1" extension_auto="1" />
+				<Option output="build-win-cb/Delorean" prefix_auto="1" extension_auto="1" />
 				<Option working_dir="build-win-cb/" />
 				<Option object_output="build-win-cb/Release" />
 				<Option type="3" />
 				<Option compiler="gcc" />
-				<Option parameters="Dolorean.dll" />
+				<Option parameters="Delorean.dll" />
 				<Option host_application="C:/Program Files/vsthost/vsthost.exe" />
 				<Option run_host_application_in_terminal="0" />
 				<Compiler>
@@ -53,12 +53,12 @@
 				</Compiler>
 			</Target>
 			<Target title="Tracer Win32">
-				<Option output="build-win-cb/Dolorean" prefix_auto="1" extension_auto="1" />
+				<Option output="build-win-cb/Delorean" prefix_auto="1" extension_auto="1" />
 				<Option working_dir="build-win-cb/" />
 				<Option object_output="build-win-cb/Tracer" />
 				<Option type="3" />
 				<Option compiler="gcc" />
-				<Option parameters="Dolorean.dll" />
+				<Option parameters="Delorean.dll" />
 				<Option host_application="C:/Program Files/vsthost/vsthost.exe" />
 				<Option run_host_application_in_terminal="0" />
 				<Compiler>
@@ -242,9 +242,9 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="../../WDL/zlib/zutil.h" />
-		<Unit filename="Dolorean.cpp" />
-		<Unit filename="Dolorean.h" />
-		<Unit filename="Dolorean.rc">
+		<Unit filename="Delorean.cpp" />
+		<Unit filename="Delorean.h" />
+		<Unit filename="Delorean.rc">
 			<Option compilerVar="WINDRES" />
 		</Unit>
 		<Unit filename="resource.h" />

@@ -1,13 +1,13 @@
 [Setup]
-AppName=Dolorean
+AppName=Delorean
 AppVersion=1.0.0
-DefaultDirName={pf}\Dolorean
-DefaultGroupName=Dolorean
+DefaultDirName={pf}\Delorean
+DefaultGroupName=Delorean
 Compression=lzma2
 SolidCompression=yes
 OutputDir=.\
 ArchitecturesInstallIn64BitMode=x64
-OutputBaseFilename=Dolorean Installer
+OutputBaseFilename=Delorean Installer
 LicenseFile=license.rtf
 SetupLogging=yes
 
@@ -27,33 +27,33 @@ Name: "aax_64"; Description: "64-bit AAX Plugin (.aaxplugin)"; Types: full custo
 Name: "manual"; Description: "User guide"; Types: full custom; Flags: fixed
 
 [Files]
-Source: "..\build-win\app\Win32\bin\Dolorean.exe"; DestDir: "{app}"; Check: not Is64BitInstallMode; Components:app; Flags: ignoreversion;
-Source: "..\build-win\app\x64\bin\Dolorean.exe"; DestDir: "{app}"; Check: Is64BitInstallMode; Components:app; Flags: ignoreversion;
+Source: "..\build-win\app\Win32\bin\Delorean.exe"; DestDir: "{app}"; Check: not Is64BitInstallMode; Components:app; Flags: ignoreversion;
+Source: "..\build-win\app\x64\bin\Delorean.exe"; DestDir: "{app}"; Check: Is64BitInstallMode; Components:app; Flags: ignoreversion;
 
-Source: "..\build-win\vst2\Win32\bin\Dolorean.dll"; DestDir: {code:GetVST2Dir_32}; Check: not Is64BitInstallMode; Components:vst2_32; Flags: ignoreversion;
-Source: "..\build-win\vst2\Win32\bin\Dolorean.dll"; DestDir: {code:GetVST2Dir_32}; Check: Is64BitInstallMode; Components:vst2_32; Flags: ignoreversion;
-Source: "..\build-win\vst2\x64\bin\Dolorean.dll"; DestDir: {code:GetVST2Dir_64}; Check: Is64BitInstallMode; Components:vst2_64; Flags: ignoreversion;
+Source: "..\build-win\vst2\Win32\bin\Delorean.dll"; DestDir: {code:GetVST2Dir_32}; Check: not Is64BitInstallMode; Components:vst2_32; Flags: ignoreversion;
+Source: "..\build-win\vst2\Win32\bin\Delorean.dll"; DestDir: {code:GetVST2Dir_32}; Check: Is64BitInstallMode; Components:vst2_32; Flags: ignoreversion;
+Source: "..\build-win\vst2\x64\bin\Delorean.dll"; DestDir: {code:GetVST2Dir_64}; Check: Is64BitInstallMode; Components:vst2_64; Flags: ignoreversion;
 
-Source: "..\build-win\vst3\Win32\bin\Dolorean.vst3"; DestDir: "{cf}\VST3\"; Check: not Is64BitInstallMode; Components:vst3_32; Flags: ignoreversion;
-Source: "..\build-win\vst3\Win32\bin\Dolorean.vst3"; DestDir: "{cf32}\VST3\"; Check: Is64BitInstallMode; Components:vst3_32; Flags: ignoreversion;
-Source: "..\build-win\vst3\x64\bin\Dolorean.vst3"; DestDir: "{cf64}\VST3\"; Check: Is64BitInstallMode; Components:vst3_64; Flags: ignoreversion;
+Source: "..\build-win\vst3\Win32\bin\Delorean.vst3"; DestDir: "{cf}\VST3\"; Check: not Is64BitInstallMode; Components:vst3_32; Flags: ignoreversion;
+Source: "..\build-win\vst3\Win32\bin\Delorean.vst3"; DestDir: "{cf32}\VST3\"; Check: Is64BitInstallMode; Components:vst3_32; Flags: ignoreversion;
+Source: "..\build-win\vst3\x64\bin\Delorean.vst3"; DestDir: "{cf64}\VST3\"; Check: Is64BitInstallMode; Components:vst3_64; Flags: ignoreversion;
 
-Source: "..\build-win\rtas\bin\Dolorean.dpm"; DestDir: "{cf32}\Digidesign\DAE\Plug-Ins\"; Components:rtas_32; Flags: ignoreversion;
-Source: "..\build-win\rtas\bin\Dolorean.dpm.rsr"; DestDir: "{cf32}\Digidesign\DAE\Plug-Ins\"; Components:rtas_32; Flags: ignoreversion;
+Source: "..\build-win\rtas\bin\Delorean.dpm"; DestDir: "{cf32}\Digidesign\DAE\Plug-Ins\"; Components:rtas_32; Flags: ignoreversion;
+Source: "..\build-win\rtas\bin\Delorean.dpm.rsr"; DestDir: "{cf32}\Digidesign\DAE\Plug-Ins\"; Components:rtas_32; Flags: ignoreversion;
 
-Source: "..\build-win\aax\bin\Dolorean.aaxplugin\*.*"; DestDir: "{cf32}\Avid\Audio\Plug-Ins\Dolorean.aaxplugin\"; Components:aax_32; Flags: ignoreversion recursesubdirs;
-Source: "..\build-win\aax\bin\Dolorean.aaxplugin\*.*"; DestDir: "{cf}\Avid\Audio\Plug-Ins\Dolorean.aaxplugin\"; Components:aax_64; Flags: ignoreversion recursesubdirs;
+Source: "..\build-win\aax\bin\Delorean.aaxplugin\*.*"; DestDir: "{cf32}\Avid\Audio\Plug-Ins\Delorean.aaxplugin\"; Components:aax_32; Flags: ignoreversion recursesubdirs;
+Source: "..\build-win\aax\bin\Delorean.aaxplugin\*.*"; DestDir: "{cf}\Avid\Audio\Plug-Ins\Delorean.aaxplugin\"; Components:aax_64; Flags: ignoreversion recursesubdirs;
 
-Source: "..\manual\Dolorean_manual.pdf"; DestDir: "{app}"
+Source: "..\manual\Delorean_manual.pdf"; DestDir: "{app}"
 Source: "changelog.txt"; DestDir: "{app}"
 Source: "readmewin.rtf"; DestDir: "{app}"; DestName: "readme.rtf"; Flags: isreadme
 
 [Icons]
-Name: "{group}\Dolorean"; Filename: "{app}\Dolorean.exe"
-Name: "{group}\User guide"; Filename: "{app}\Dolorean_manual.pdf"
+Name: "{group}\Delorean"; Filename: "{app}\Delorean.exe"
+Name: "{group}\User guide"; Filename: "{app}\Delorean_manual.pdf"
 Name: "{group}\Changelog"; Filename: "{app}\changelog.txt"
 ;Name: "{group}\readme"; Filename: "{app}\readme.rtf"
-Name: "{group}\Uninstall Dolorean"; Filename: "{app}\unins000.exe"
+Name: "{group}\Uninstall Delorean"; Filename: "{app}\unins000.exe"
 
 ;[Dirs] 
 ;Name: {cf}\Digidesign\DAE\Plugins\

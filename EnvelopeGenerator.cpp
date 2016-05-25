@@ -1,6 +1,6 @@
 //
 //  EnvelopeGenerator.cpp
-//  Dolorean
+//  Delorean
 //
 //  Created by Morris on 20/05/16.
 //
@@ -30,6 +30,13 @@ void EnvelopeGenerator::calculateMultiplier(double startLevel,
 }
 
 void EnvelopeGenerator::enterStage(Stage newStage) {
+    if (_currentStage == newStage) return;
+    if (_currentStage == Stage::Off && _handlers[0]) {
+        _handlers[0]();
+    }
+    if (newStage == Stage::Off && _handlers[1]) { // TODO: else if
+        _handlers[1]();
+    }
     _currentStage = newStage;
     _currentSampleIndex = 0;
     if (_currentStage == Stage::Off ||

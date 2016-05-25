@@ -2,7 +2,7 @@
 <PageTables vers='6.4.0.91'>
 	<PageTableLayouts>
 		<Plugin manID='Acme' prodID='Ipef' plugID='Ipef'>
-			<Desc>Dolorean by Dive.</Desc>
+			<Desc>Delorean by Dive.</Desc>
 			<Layout>PageTable 1</Layout>
 		</Plugin><!--manID='Acme' prodID='Ipef' plugID='Ipef'-->
 		<PTLayout name='PageTable 1'>
@@ -132,7 +132,7 @@
 			</TDM>
 			<RTAS>
 				<PluginID manID='Acme' prodID='Ipef' plugID='Ipef'>
-					<MenuStr>RTAS: Dolorean</MenuStr>
+					<MenuStr>RTAS: Delorean</MenuStr>
 				</PluginID><!--manID='Acme' prodID='Ipef' plugID='Ipef'-->
 			</RTAS>
 		</PluginList>
