@@ -1,6 +1,6 @@
 //
 //  MIDIReceiver.cpp
-//  Dolorean
+//  Delorean
 //
 //  Created by Morris on 20/05/16.
 //
@@ -30,7 +30,6 @@ void MIDIReceiver::advance() {
         IMidiMsg::EStatusMsg status = midiMessage->StatusMsg();
         int noteNumber = midiMessage->NoteNumber();
         int velocity = midiMessage->Velocity();
-        // There are only note on/off messages in the queue, see ::OnMessageReceived
         if (status == IMidiMsg::kNoteOn && velocity) {
             if(_keyStatus[noteNumber] == false) {
                 _keyStatus[noteNumber] = true;
@@ -41,6 +40,8 @@ void MIDIReceiver::advance() {
                 _lastNoteNumber = noteNumber;
                 _lastFrequency = noteNumberToFrequency(_lastNoteNumber);
                 _lastVelocity = velocity;
+
+                if (this->_keyHandlers[0]) this->_keyHandlers[0](noteNumber, velocity);
             }
         } else {
             if(_keyStatus[noteNumber] == true) {
@@ -50,11 +51,15 @@ void MIDIReceiver::advance() {
             // If the last note was released, nothing should play:
             if (noteNumber == _lastNoteNumber) {
                 _lastNoteNumber = -1;
-                _lastFrequency = -1;
-                _lastVelocity = 0;
+
+                if (this->_keyHandlers[1]) this->_keyHandlers[1](noteNumber, velocity);
             }
         }
         this->_midiQueue.Remove();
     }
     _offset += 1;
+}
+
+void MIDIReceiver::setHandler(Handler h, std::function<void (int, int)> &&fn) {
+    this->_keyHandlers[static_cast<size_t>(h)] = std::move(fn);
 }
