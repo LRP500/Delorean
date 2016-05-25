@@ -89,6 +89,8 @@ instrument determined by PLUG _IS _INST
 
 #define PLUG_DOES_MIDI 1
 
+#define uint32 uint32_t
+
 /* "Fx|Analyzer"", "Fx|Delay", "Fx|Distortion", "Fx|Dynamics", "Fx|EQ", "Fx|Filter",
 "Fx", "Fx|Instrument", "Fx|InstrumentExternal", "Fx|Spatial", "Fx|Generator",
 "Fx|Mastering", "Fx|Modulation", "Fx|PitchShift", "Fx|Restoration", "Fx|Reverb",

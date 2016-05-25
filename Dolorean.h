@@ -4,7 +4,7 @@
 #define uint32 uint32_t // Dans le plus grand des calmes
 
 #include "IPlug_include_in_plug_hdr.h"
-#include "Oscillator.hpp"
+#include "Synth.hpp"
 #include "MIDIReceiver.hpp"
 
 #include <vector>
@@ -29,7 +29,7 @@ public:
   inline bool                   GetKeyStatus(int key) const { return this->_MIDIReceiver.getKeyStatus(key); };
 
 private:
-  Oscillator                    _oscillator;
+  Synth                         _synth;
   MIDIReceiver                  _MIDIReceiver;
   IControl*                     _virtualKeyboard;
   int                           _lastVirtualKeyboardNoteNumber = k_virtualKeyboardMinimumNoteNumber - 1;

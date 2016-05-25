@@ -54,7 +54,7 @@ PROFILE = NO //NO, YES - enable this if you want to use shark to profile a plugi
 
 // GCC optimization level -
 // None: [-O0] Fast: [-O, -O1] Faster:[-O2] Fastest: [-O3] Fastest, smallest: Optimize for size. [-Os]
-RELEASE_OPTIMIZE = 3 //0,1,2,3,s
+RELEASE_OPTIMIZE = 2 //0,1,2,3,s
 
 //------------------------------
 // Debug build options

@@ -3,6 +3,7 @@
 #include "IControl.h"
 #include "IKeyboardControl.h"
 #include "resource.h"
+#include "Oscillator.hpp"
 
 const int kNumPrograms = 1;
 
@@ -31,7 +32,7 @@ enum ELayout
   kKeybY = 230
 };
 
-Dolorean::Dolorean(IPlugInstanceInfo instanceInfo)
+Dolorean::Dolorean(IPlugInstanceInfo instanceInfo) // TODO: Refactor
   :	IPLUG_CTOR(kNumParams, kNumPrograms, instanceInfo)
 {
   TRACE;
@@ -112,8 +113,8 @@ Dolorean::Dolorean(IPlugInstanceInfo instanceInfo)
   AttachGraphics(pGraphics);
   MakeDefaultPreset((char *) "-", kNumPrograms);
 
-  _MIDIReceiver.setHandler(MIDIReceiver::Handler::KeyPressed, std::bind(&Oscillator::onNoteOn, &_oscillator, std::placeholders::_1, std::placeholders::_2));
-  _MIDIReceiver.setHandler(MIDIReceiver::Handler::KeyReleased, std::bind(&Oscillator::onNoteOff, &_oscillator, std::placeholders::_1, std::placeholders::_2));
+  _MIDIReceiver.setHandler(MIDIReceiver::Handler::KeyPressed, std::bind(&Synth::onNoteOn, &_synth, std::placeholders::_1, std::placeholders::_2));
+  _MIDIReceiver.setHandler(MIDIReceiver::Handler::KeyReleased, std::bind(&Synth::onNoteOff, &_synth, std::placeholders::_1, std::placeholders::_2));
 }
 
 Dolorean::~Dolorean() {}
@@ -128,15 +129,7 @@ void Dolorean::ProcessDoubleReplacing(double** inputs, double** outputs, int nFr
 
   for (int i = 0; i < nFrames; ++i) {
     this->_MIDIReceiver.advance();
-    int velocity = this->_MIDIReceiver.getLastVelocity();
-    if (velocity > 0) {
-      this->_oscillator.setFrequency(this->_MIDIReceiver.getLastFrequency());
-      this->_oscillator.setMute(false);
-    } else {
-      this->_oscillator.setMute(true);
-    }
-
-    leftOutput[i] = rightOutput[i] = this->_oscillator.nextSample(velocity);
+    leftOutput[i] = rightOutput[i] = _synth.process(this->_MIDIReceiver.getLastFrequency(), this->_MIDIReceiver.getLastVelocity());
   }
 
   this->_MIDIReceiver.Flush(nFrames);
@@ -146,44 +139,44 @@ void Dolorean::Reset() {
   TRACE;
   IMutexLock lock(this);
 
-  this->_oscillator.setSampleRate(GetSampleRate());
+  this->_synth.reset(GetSampleRate());
 }
 
 void Dolorean::OnParamChange(int paramIdx) {
   IMutexLock lock(this);
   switch(paramIdx) {
     case mWaveform:
-      _oscillator.setMode(static_cast<Oscillator::Mode>(GetParam(mWaveform)->Int()));
+      _synth.setOscillatorMode(static_cast<Oscillator::Mode>(GetParam(mWaveform)->Int()));
       break;
     case mAttack:
     case mDecay:
     case mSustain:
     case mRelease:
-      _oscillator.setEnveloppeStageValue(static_cast<EnvelopeGenerator::Stage>(paramIdx), GetParam(paramIdx)->Value());
+      _synth.setOscEnveloppeStageValue(static_cast<EnvelopeGenerator::Stage>(paramIdx), GetParam(paramIdx)->Value());
       break;
     case mFilterCutoff:
-      _oscillator.setCutoff(GetParam(paramIdx)->Value());
+      _synth.setFilterCutoff(GetParam(paramIdx)->Value());
       break;
     case mFilterResonance:
-      _oscillator.setResonance(GetParam(paramIdx)->Value());
+      _synth.setFilterResonance(GetParam(paramIdx)->Value());
       break;
     case mFilterMode:
-      _oscillator.setFilterMode(static_cast<Filter::Mode>(GetParam(paramIdx)->Int()));
+      _synth.setFilterMode(static_cast<Filter::Mode>(GetParam(paramIdx)->Int()));
       break;
     case mFilterAttack:
-      _oscillator.setFilterStageValue(EnvelopeGenerator::Stage::Attack, GetParam(paramIdx)->Value());
+      _synth.setFilterStageValue(EnvelopeGenerator::Stage::Attack, GetParam(paramIdx)->Value());
       break;
     case mFilterDecay:
-      _oscillator.setFilterStageValue(EnvelopeGenerator::Stage::Decay, GetParam(paramIdx)->Value());
+      _synth.setFilterStageValue(EnvelopeGenerator::Stage::Decay, GetParam(paramIdx)->Value());
       break;
     case mFilterSustain:
-      _oscillator.setFilterStageValue(EnvelopeGenerator::Stage::Sustain, GetParam(paramIdx)->Value());
+      _synth.setFilterStageValue(EnvelopeGenerator::Stage::Sustain, GetParam(paramIdx)->Value());
       break;
     case mFilterRelease:
-      _oscillator.setFilterStageValue(EnvelopeGenerator::Stage::Release, GetParam(paramIdx)->Value());
+      _synth.setFilterStageValue(EnvelopeGenerator::Stage::Release, GetParam(paramIdx)->Value());
       break;
     case mFilterEnvelopeAmount:
-      _oscillator.setFilterEnvelopeAmount(GetParam(paramIdx)->Value());
+      _synth.setFilterEnvelopeAmount(GetParam(paramIdx)->Value());
       break;
   }
 }

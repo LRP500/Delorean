@@ -295,6 +295,14 @@
 		A51237D21CF5E8D000A19F81 /* filtermode.png in Resources */ = {isa = PBXBuildFile; fileRef = A51237CE1CF5E8D000A19F81 /* filtermode.png */; };
 		A51237D31CF5E8D000A19F81 /* filtermode.png in Resources */ = {isa = PBXBuildFile; fileRef = A51237CE1CF5E8D000A19F81 /* filtermode.png */; };
 		A51237D41CF5E8D000A19F81 /* filtermode.png in Resources */ = {isa = PBXBuildFile; fileRef = A51237CE1CF5E8D000A19F81 /* filtermode.png */; };
+		A51237F71CF622A800A19F81 /* Synth.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A51237F51CF622A800A19F81 /* Synth.cpp */; };
+		A51237F81CF622A800A19F81 /* Synth.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A51237F51CF622A800A19F81 /* Synth.cpp */; };
+		A51237F91CF622A800A19F81 /* Synth.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A51237F51CF622A800A19F81 /* Synth.cpp */; };
+		A51237FA1CF622A800A19F81 /* Synth.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A51237F51CF622A800A19F81 /* Synth.cpp */; };
+		A51237FB1CF622A800A19F81 /* Synth.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A51237F51CF622A800A19F81 /* Synth.cpp */; };
+		A51237FC1CF622A800A19F81 /* Synth.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A51237F51CF622A800A19F81 /* Synth.cpp */; };
+		A51237FD1CF622A800A19F81 /* Synth.hpp in Headers */ = {isa = PBXBuildFile; fileRef = A51237F61CF622A800A19F81 /* Synth.hpp */; };
+		A51237FE1CF622A800A19F81 /* Synth.hpp in Headers */ = {isa = PBXBuildFile; fileRef = A51237F61CF622A800A19F81 /* Synth.hpp */; };
 		A532F34B1CEE7C36007EA333 /* Oscillator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A532F3491CEE7C36007EA333 /* Oscillator.cpp */; };
 		A532F34C1CEE7C36007EA333 /* Oscillator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A532F3491CEE7C36007EA333 /* Oscillator.cpp */; };
 		A532F34D1CEE7C36007EA333 /* Oscillator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A532F3491CEE7C36007EA333 /* Oscillator.cpp */; };
@@ -721,6 +729,8 @@
 		A51237C01CF5E8C000A19F81 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
 		A51237C71CF5E8C700A19F81 /* knob_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = knob_small.png; sourceTree = "<group>"; };
 		A51237CE1CF5E8D000A19F81 /* filtermode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = filtermode.png; sourceTree = "<group>"; };
+		A51237F51CF622A800A19F81 /* Synth.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Synth.cpp; sourceTree = "<group>"; };
+		A51237F61CF622A800A19F81 /* Synth.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Synth.hpp; sourceTree = "<group>"; };
 		A532F3491CEE7C36007EA333 /* Oscillator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Oscillator.cpp; sourceTree = "<group>"; };
 		A532F34A1CEE7C36007EA333 /* Oscillator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Oscillator.hpp; sourceTree = "<group>"; };
 		A532F3541CEE849E007EA333 /* MIDIReceiver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MIDIReceiver.cpp; sourceTree = "<group>"; };
@@ -1435,7 +1445,7 @@
 			isa = PBXGroup;
 			children = (
 				A532F3531CEE848B007EA333 /* MIDI */,
-				A532F3481CEE7B06007EA333 /* Oscillator */,
+				A532F3481CEE7B06007EA333 /* Synth */,
 				52FBBED20D0CF13D001C8B8A /* Dolorean.h */,
 				52FBBED00D0CF139001C8B8A /* Dolorean.cpp */,
 			);
@@ -1465,9 +1475,11 @@
 			name = Disto;
 			sourceTree = "<group>";
 		};
-		A532F3481CEE7B06007EA333 /* Oscillator */ = {
+		A532F3481CEE7B06007EA333 /* Synth */ = {
 			isa = PBXGroup;
 			children = (
+				A51237F51CF622A800A19F81 /* Synth.cpp */,
+				A51237F61CF622A800A19F81 /* Synth.hpp */,
 				A532F3491CEE7C36007EA333 /* Oscillator.cpp */,
 				A532F34A1CEE7C36007EA333 /* Oscillator.hpp */,
 				A532F3731CEF3375007EA333 /* EnvelopeGenerator.cpp */,
@@ -1475,7 +1487,7 @@
 				A51237B41CF5E6F500A19F81 /* Filter.cpp */,
 				A51237B51CF5E6F500A19F81 /* Filter.hpp */,
 			);
-			name = Oscillator;
+			name = Synth;
 			sourceTree = "<group>";
 		};
 		A532F3531CEE848B007EA333 /* MIDI */ = {
@@ -1523,6 +1535,7 @@
 				4F78D95413B63BA50032E0F3 /* IPopupMenu.h in Headers */,
 				4F78D95613B63BA50032E0F3 /* IPlugStructs.h in Headers */,
 				A532F35D1CEE849E007EA333 /* MIDIReceiver.hpp in Headers */,
+				A51237FE1CF622A800A19F81 /* Synth.hpp in Headers */,
 				4F78D95A13B63BA50032E0F3 /* IPlug_Prefix.pch in Headers */,
 				4F78D95B13B63BA50032E0F3 /* IParam.h in Headers */,
 				4F78D95D13B63BA50032E0F3 /* IMidiQueue.h in Headers */,
@@ -1548,6 +1561,7 @@
 				4F78DAB313B640470032E0F3 /* swellappmain.h in Headers */,
 				A51237BC1CF5E6F500A19F81 /* Filter.hpp in Headers */,
 				4F78DA7713B640050032E0F3 /* resource.h in Headers */,
+				A51237FD1CF622A800A19F81 /* Synth.hpp in Headers */,
 				4F78DA7813B640050032E0F3 /* Dolorean.h in Headers */,
 				4F78DA8A13B640050032E0F3 /* mutex.h in Headers */,
 				A532F37B1CEF3375007EA333 /* EnvelopeGenerator.hpp in Headers */,
@@ -1960,6 +1974,7 @@
 				4F78D9C813B63BA50032E0F3 /* IParam.cpp in Sources */,
 				A532F3761CEF3375007EA333 /* EnvelopeGenerator.cpp in Sources */,
 				4F78D9C913B63BA50032E0F3 /* IControl.cpp in Sources */,
+				A51237F81CF622A800A19F81 /* Synth.cpp in Sources */,
 				4F78D9F313B63C6A0032E0F3 /* IPlugVST.cpp in Sources */,
 				4FDA440C13F3E4F2000B4551 /* IBitmapMonoText.cpp in Sources */,
 				A532F3571CEE849E007EA333 /* MIDIReceiver.cpp in Sources */,
@@ -1980,6 +1995,7 @@
 				A532F3781CEF3375007EA333 /* EnvelopeGenerator.cpp in Sources */,
 				4F78D94E13B63BA50032E0F3 /* IGraphics.cpp in Sources */,
 				4F78D94F13B63BA50032E0F3 /* IGraphicsCarbon.cpp in Sources */,
+				A51237FA1CF622A800A19F81 /* Synth.cpp in Sources */,
 				A51237B91CF5E6F500A19F81 /* Filter.cpp in Sources */,
 				4F78D95013B63BA50032E0F3 /* IGraphicsCocoa.mm in Sources */,
 				A532F3591CEE849E007EA333 /* MIDIReceiver.cpp in Sources */,
@@ -2022,6 +2038,7 @@
 				4F7F5CB113E9607A002918FD /* IPlugGroup.cpp in Sources */,
 				4F7F5CB213E9607A002918FD /* IPlugProcess.cpp in Sources */,
 				4F7F5CB313E9607A002918FD /* IPlugProcessRTAS.cpp in Sources */,
+				A51237FB1CF622A800A19F81 /* Synth.cpp in Sources */,
 				4FDA440713F3E4F2000B4551 /* IBitmapMonoText.cpp in Sources */,
 				A532F35A1CEE849E007EA333 /* MIDIReceiver.cpp in Sources */,
 				4F79A34E146304CD00744AED /* IPlugProcessAS.cpp in Sources */,
@@ -2038,6 +2055,7 @@
 				4F9828B9140A9EB700F3FCC1 /* IPlugStructs.cpp in Sources */,
 				4F9828BA140A9EB700F3FCC1 /* Hosts.cpp in Sources */,
 				4F9828BB140A9EB700F3FCC1 /* IGraphicsMac.mm in Sources */,
+				A51237F91CF622A800A19F81 /* Synth.cpp in Sources */,
 				4F9828BC140A9EB700F3FCC1 /* IGraphics.cpp in Sources */,
 				4F9828BD140A9EB700F3FCC1 /* IGraphicsCarbon.cpp in Sources */,
 				4F9828BE140A9EB700F3FCC1 /* IGraphicsCocoa.mm in Sources */,
@@ -2090,6 +2108,7 @@
 				4FB600231567CB0A0020189A /* IParam.cpp in Sources */,
 				4FB600241567CB0A0020189A /* IControl.cpp in Sources */,
 				A532F35B1CEE849E007EA333 /* MIDIReceiver.cpp in Sources */,
+				A51237FC1CF622A800A19F81 /* Synth.cpp in Sources */,
 				4FB600251567CB0A0020189A /* IBitmapMonoText.cpp in Sources */,
 				4FB600261567CB0A0020189A /* AAX_Exports.cpp in Sources */,
 				4FB600271567CB0A0020189A /* IPlugAAX.cpp in Sources */,
@@ -2135,6 +2154,7 @@
 				4F78DA5A13B63F150032E0F3 /* Dolorean.cpp in Sources */,
 				4FD16CA213B6327D001D0217 /* app_main.cpp in Sources */,
 				4FD16CA313B6327D001D0217 /* app_dialog.cpp in Sources */,
+				A51237F71CF622A800A19F81 /* Synth.cpp in Sources */,
 				4FB3624F13B648FE00DB6B76 /* main.mm in Sources */,
 				4FDA440E13F3E4F2000B4551 /* IBitmapMonoText.cpp in Sources */,
 				A532F34B1CEE7C36007EA333 /* Oscillator.cpp in Sources */,
