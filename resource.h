@@ -1,19 +1,19 @@
 #define PLUG_MFR "Dive"
-#define PLUG_NAME "Dolorean"
+#define PLUG_NAME "Delorean"
 
-#define PLUG_CLASS_NAME Dolorean
+#define PLUG_CLASS_NAME Delorean
 
 #define BUNDLE_MFR "Dive"
-#define BUNDLE_NAME "Dolorean"
+#define BUNDLE_NAME "Delorean"
 
-#define PLUG_ENTRY Dolorean_Entry
-#define PLUG_VIEW_ENTRY Dolorean_ViewEntry
+#define PLUG_ENTRY Delorean_Entry
+#define PLUG_VIEW_ENTRY Delorean_ViewEntry
 
-#define PLUG_ENTRY_STR "Dolorean_Entry"
-#define PLUG_VIEW_ENTRY_STR "Dolorean_ViewEntry"
+#define PLUG_ENTRY_STR "Delorean_Entry"
+#define PLUG_VIEW_ENTRY_STR "Delorean_ViewEntry"
 
-#define VIEW_CLASS Dolorean_View
-#define VIEW_CLASS_STR "Dolorean_View"
+#define VIEW_CLASS Delorean_View
+#define VIEW_CLASS_STR "Delorean_View"
 
 // Format        0xMAJR.MN.BG - in HEX! so version 10.1.5 would be 0x000A0105
 #define PLUG_VER 0x00010000
@@ -34,7 +34,7 @@
 #endif
 
 #define PLUG_MFR_PT "Dive\nDive\nAcme"
-#define PLUG_NAME_PT "Dolorean\nIPEF"
+#define PLUG_NAME_PT "Delorean\nIPEF"
 #define PLUG_TYPE_PT "Effect"
 #define PLUG_DOES_AUDIOSUITE 1
 

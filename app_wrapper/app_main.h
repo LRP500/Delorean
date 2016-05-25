@@ -12,9 +12,9 @@
 
  App settings are stored in a .ini file. The location is as follows:
 
- Windows7: C:\Users\USERNAME\AppData\Local\Dolorean\settings.ini
- Windows XP/Vista: C:\Documents and Settings\USERNAME\Local Settings\Application Data\Dolorean\settings.ini
- OSX: /Users/USERNAME/Library/Application\ Support/Dolorean/settings.ini
+ Windows7: C:\Users\USERNAME\AppData\Local\Delorean\settings.ini
+ Windows XP/Vista: C:\Documents and Settings\USERNAME\Local Settings\Application Data\Delorean\settings.ini
+ OSX: /Users/USERNAME/Library/Application\ Support/Delorean/settings.ini
 
 */
 
@@ -44,7 +44,7 @@
 #include <string>
 #include <vector>
 
-#include "../Dolorean.h" // change this to match your iplug plugin .h file
+#include "../Delorean.h" // change this to match your iplug plugin .h file
 
 typedef unsigned short UInt16;
 

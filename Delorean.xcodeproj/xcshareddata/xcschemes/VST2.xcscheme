@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4F3AE17812C0E5E2001FD7A4"
-               BuildableName = "Dolorean.component"
-               BlueprintName = "AU"
-               ReferencedContainer = "container:Dolorean.xcodeproj">
+               BlueprintIdentifier = "4F20EEC8132C69FE0030E34C"
+               BuildableName = "Delorean.vst"
+               BlueprintName = "VST2"
+               ReferencedContainer = "container:Delorean.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -44,15 +44,15 @@
       allowLocationSimulation = "YES">
       <PathRunnable
          runnableDebuggingMode = "0"
-         FilePath = "/Applications/Developer/AU Lab.app">
+         FilePath = "/Applications/Ableton Live 9 Suite.app">
       </PathRunnable>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4F3AE17812C0E5E2001FD7A4"
-            BuildableName = "Dolorean.component"
-            BlueprintName = "AU"
-            ReferencedContainer = "container:Dolorean.xcodeproj">
+            BlueprintIdentifier = "4F20EEC8132C69FE0030E34C"
+            BuildableName = "Delorean.vst"
+            BlueprintName = "VST2"
+            ReferencedContainer = "container:Delorean.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -66,7 +66,7 @@
       debugDocumentVersioning = "YES">
       <PathRunnable
          runnableDebuggingMode = "0"
-         FilePath = "/Applications/Developer/AU Lab.app">
+         FilePath = "/Applications/REAPER.app">
       </PathRunnable>
    </ProfileAction>
    <AnalyzeAction

@@ -1,6 +1,6 @@
 //
 //  Oscillator.hpp
-//  Dolorean
+//  Delorean
 //
 //  Created by Morris on 20/05/16.
 //

@@ -1,4 +1,4 @@
-#include "Dolorean.h"
+#include "Delorean.h"
 #include "IPlug_include_in_plug_src.h"
 #include "IControl.h"
 #include "IKeyboardControl.h"
@@ -32,7 +32,7 @@ enum ELayout
   kKeybY = 230
 };
 
-Dolorean::Dolorean(IPlugInstanceInfo instanceInfo) // TODO: Refactor
+Delorean::Delorean(IPlugInstanceInfo instanceInfo) // TODO: Refactor
   :	IPLUG_CTOR(kNumParams, kNumPrograms, instanceInfo)
 {
   TRACE;
@@ -117,9 +117,9 @@ Dolorean::Dolorean(IPlugInstanceInfo instanceInfo) // TODO: Refactor
   _MIDIReceiver.setHandler(MIDIReceiver::Handler::KeyReleased, std::bind(&Synth::onNoteOff, &_synth, std::placeholders::_1, std::placeholders::_2));
 }
 
-Dolorean::~Dolorean() {}
+Delorean::~Delorean() {}
 
-void Dolorean::ProcessDoubleReplacing(double** inputs, double** outputs, int nFrames) {
+void Delorean::ProcessDoubleReplacing(double** inputs, double** outputs, int nFrames) {
   // Mutex is already locked for us.
 
   double *leftOutput = outputs[0];
@@ -135,14 +135,14 @@ void Dolorean::ProcessDoubleReplacing(double** inputs, double** outputs, int nFr
   this->_MIDIReceiver.Flush(nFrames);
 }
 
-void Dolorean::Reset() {
+void Delorean::Reset() {
   TRACE;
   IMutexLock lock(this);
 
   this->_synth.reset(GetSampleRate());
 }
 
-void Dolorean::OnParamChange(int paramIdx) {
+void Delorean::OnParamChange(int paramIdx) {
   IMutexLock lock(this);
   switch(paramIdx) {
     case mWaveform:
@@ -181,12 +181,12 @@ void Dolorean::OnParamChange(int paramIdx) {
   }
 }
 
-void Dolorean::ProcessMidiMsg(IMidiMsg* pMsg) {
+void Delorean::ProcessMidiMsg(IMidiMsg* pMsg) {
   this->_MIDIReceiver.onMessageReceived(pMsg);
   this->_virtualKeyboard->SetDirty();
 }
 
-void Dolorean::processVirtualKeyboard() {
+void Delorean::processVirtualKeyboard() {
   IKeyboardControl* virtualKeyboard = (IKeyboardControl*) this->_virtualKeyboard; // TODO: Cast
   int virtualKeyboardNoteNumber = virtualKeyboard->GetKey() + k_virtualKeyboardMinimumNoteNumber;
 

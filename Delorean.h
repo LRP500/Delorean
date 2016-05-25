@@ -1,5 +1,5 @@
-#ifndef __DOLOREAN__
-#define __DOLOREAN__
+#ifndef __DELOREAN__
+#define __DELOREAN__
 
 #define uint32 uint32_t // Dans le plus grand des calmes
 
@@ -9,13 +9,13 @@
 
 #include <vector>
 
-class Dolorean : public IPlug
+class Delorean : public IPlug
 {
   static constexpr int k_virtualKeyboardMinimumNoteNumber = 48;
 
 public:
-  Dolorean(IPlugInstanceInfo instanceInfo);
-  ~Dolorean();
+  Delorean(IPlugInstanceInfo instanceInfo);
+  ~Delorean();
 
 public:
   void                          Reset();
