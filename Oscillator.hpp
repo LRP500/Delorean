@@ -10,6 +10,7 @@
 
 #include <cmath>
 #include "EnvelopeGenerator.hpp"
+#include "Filter.hpp"
 
 class Oscillator {
     static constexpr double k_PI = M_PI;
@@ -36,23 +37,31 @@ public:
     void                setFrequency(double frequency);
     void                setSampleRate(double sampleRate);
     void                generate(double* buffer, int nFrames);
-    double              nextSample();
+    double              nextSample(int);
     void                setEnveloppeStageValue(EnvelopeGenerator::Stage, double);
+    void                setFilterStageValue(EnvelopeGenerator::Stage, double);
+    void                setFilterEnvelopeAmount(double);
 
-    inline void         onNoteOn(const int noteNumber, const int velocity)
-        { _generator.enterStage(EnvelopeGenerator::Stage::Attack); };
-    inline void         onNoteOff(const int noteNumber, const int velocity)
-        { _generator.enterStage(EnvelopeGenerator::Stage::Release); };
+    inline void         onNoteOn(const int noteNumber, const int velocity) { _generator.enterStage(EnvelopeGenerator::Stage::Attack); _filterGenerator.enterStage(EnvelopeGenerator::Stage::Attack); };
+    inline void         onNoteOff(const int noteNumber, const int velocity) { _generator.enterStage(EnvelopeGenerator::Stage::Release); _filterGenerator.enterStage(EnvelopeGenerator::Stage::Release); };
+
+    // Filter settings
+    inline void         setCutoff(double newCutoff) { _filter.setCutoff(newCutoff); };
+    inline void         setResonance(double newResonance) { _filter.setResonance(newResonance); };
+    inline void         setFilterMode(Filter::Mode newMode) { _filter.setFilterMode(newMode); }
 
 protected:
     void                updateIncrement();
 
 private:
-    Mode                _mode               = Mode::Sine;
-    bool                _muted              = true;
-    double              _frequency          = 440.0;
-    double              _phase              = 0;
-    double              _sampleRate         = 44100.0;
-    double              _phaseIncrement     = 0.0;
+    Mode                _mode                   = Mode::Sine;
+    bool                _muted                  = true;
+    double              _frequency              = 440.0;
+    double              _phase                  = 0;
+    double              _sampleRate             = 44100.0;
+    double              _phaseIncrement         = 0.0;
+    double              _filterEnvelopeAmount   = 0.0;
     EnvelopeGenerator   _generator;
+    EnvelopeGenerator   _filterGenerator;
+    Filter              _filter;
 };

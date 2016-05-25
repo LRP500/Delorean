@@ -25,6 +25,7 @@ void Oscillator::setFrequency(double frequency) {
 void Oscillator::setSampleRate(double sampleRate) {
     this->_sampleRate = sampleRate;
     this->_generator.setSampleRate(sampleRate);
+    this->_filterGenerator.setSampleRate(sampleRate);
     this->updateIncrement();
 }
 
@@ -76,10 +77,12 @@ void Oscillator::generate(double* buffer, int nFrames) {
                 }
             }
             break;
+        default:
+            break;
     }
 }
 
-double Oscillator::nextSample() {
+double Oscillator::nextSample(int velocity) {
     double value = 0.0;
     if(this->isMuteded()) return value;
 
@@ -109,9 +112,19 @@ double Oscillator::nextSample() {
         this->_phase -= k_2PI;
     }
 
-    return value * _generator.nextSample();
+    _filter.updateCutoffMod(_filterGenerator.nextSample() * _filterEnvelopeAmount);
+    return _filter.process(value * _generator.nextSample() * velocity / 127.0);
 }
 
 void Oscillator::setEnveloppeStageValue(EnvelopeGenerator::Stage stage, double value) {
     _generator.setStageValue(stage, value);
 }
+
+void Oscillator::setFilterStageValue(EnvelopeGenerator::Stage stage, double value) {
+    _filterGenerator.setStageValue(stage, value);
+}
+
+void Oscillator::setFilterEnvelopeAmount(double value) {
+    _filterEnvelopeAmount = value;
+}
+

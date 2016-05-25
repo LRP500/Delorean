@@ -13,9 +13,16 @@ enum EParams
   mDecay,
   mSustain,
   mRelease,
+  mFilterMode,
+  mFilterCutoff,
+  mFilterResonance,
+  mFilterAttack,
+  mFilterDecay,
+  mFilterSustain,
+  mFilterRelease,
+  mFilterEnvelopeAmount,
   kNumParams
 };
-
 enum ELayout
 {
   kWidth = GUI_WIDTH,
@@ -44,7 +51,7 @@ Dolorean::Dolorean(IPlugInstanceInfo instanceInfo)
   GetParam(mWaveform)->SetDisplayText(0, "Sine");
 
   IBitmap waveformBitmap = pGraphics->LoadIBitmap(WAVEFORM_ID, WAVEFORM_FN, 4);
-  pGraphics->AttachControl(new ISwitchControl(this, 24, 53, mWaveform, &waveformBitmap));
+  pGraphics->AttachControl(new ISwitchControl(this, 24, 38, mWaveform, &waveformBitmap));
 
   // Knob bitmap for ADSR
   IBitmap knobBitmap = pGraphics->LoadIBitmap(KNOB_ID, KNOB_FN, 64);
@@ -64,6 +71,43 @@ Dolorean::Dolorean(IPlugInstanceInfo instanceInfo)
   GetParam(mRelease)->InitDouble("Release", 1.0, 0.001, 15.0, 0.001);
   GetParam(mRelease)->SetShape(3);
   pGraphics->AttachControl(new IKnobMultiControl(this, 341, 34, mRelease, &knobBitmap));
+
+  GetParam(mFilterMode)->InitEnum("Filter Mode", static_cast<size_t>(Filter::Mode::LowPass), static_cast<size_t>(Filter::Mode::kNumFilterModes));
+  IBitmap filtermodeBitmap = pGraphics->LoadIBitmap(FILTERMODE_ID, FILTERMODE_FN, 3);
+  pGraphics->AttachControl(new ISwitchControl(this, 24, 123, mFilterMode, &filtermodeBitmap));
+
+  // Knobs for filter cutoff and resonance
+  IBitmap smallKnobBitmap = pGraphics->LoadIBitmap(KNOB_SMALL_ID, KNOB_SMALL_FN, 64);
+  // Cutoff knob:
+  GetParam(mFilterCutoff)->InitDouble("Cutoff", 0.99, 0.01, 0.99, 0.001);
+  GetParam(mFilterCutoff)->SetShape(2);
+  pGraphics->AttachControl(new IKnobMultiControl(this, 5, 177, mFilterCutoff, &smallKnobBitmap));
+  // Resonance knob:
+  GetParam(mFilterResonance)->InitDouble("Resonance", 0.01, 0.01, 1.0, 0.001);
+  pGraphics->AttachControl(new IKnobMultiControl(this, 61, 177, mFilterResonance, &smallKnobBitmap));
+
+  // Knobs for filter envelope
+  // Attack knob
+  GetParam(mFilterAttack)->InitDouble("Filter Env Attack", 0.01, 0.01, 10.0, 0.001);
+  GetParam(mFilterAttack)->SetShape(3);
+  pGraphics->AttachControl(new IKnobMultiControl(this, 139, 178, mFilterAttack, &smallKnobBitmap));
+  // Decay knob:
+  GetParam(mFilterDecay)->InitDouble("Filter Env Decay", 0.5, 0.01, 15.0, 0.001);
+  GetParam(mFilterDecay)->SetShape(3);
+  pGraphics->AttachControl(new IKnobMultiControl(this, 195, 178, mFilterDecay, &smallKnobBitmap));
+  // Sustain knob:
+  GetParam(mFilterSustain)->InitDouble("Filter Env Sustain", 0.1, 0.001, 1.0, 0.001);
+  GetParam(mFilterSustain)->SetShape(2);
+  pGraphics->AttachControl(new IKnobMultiControl(this, 251, 178, mFilterSustain, &smallKnobBitmap));
+  // Release knob:
+  GetParam(mFilterRelease)->InitDouble("Filter Env Release", 1.0, 0.001, 15.0, 0.001);
+  GetParam(mFilterRelease)->SetShape(3);
+  pGraphics->AttachControl(new IKnobMultiControl(this, 307, 178, mFilterRelease, &smallKnobBitmap));
+
+  // Filter envelope amount knob:
+  GetParam(mFilterEnvelopeAmount)->InitDouble("Filter Env Amount", 0.0, -1.0, 1.0, 0.001);
+  pGraphics->AttachControl(new IKnobMultiControl(this, 363, 178, mFilterEnvelopeAmount, &smallKnobBitmap));
+
 
   AttachGraphics(pGraphics);
   MakeDefaultPreset((char *) "-", kNumPrograms);
@@ -92,7 +136,7 @@ void Dolorean::ProcessDoubleReplacing(double** inputs, double** outputs, int nFr
       this->_oscillator.setMute(true);
     }
 
-    leftOutput[i] = rightOutput[i] = this->_oscillator.nextSample() * velocity / 127.0;
+    leftOutput[i] = rightOutput[i] = this->_oscillator.nextSample(velocity);
   }
 
   this->_MIDIReceiver.Flush(nFrames);
@@ -116,6 +160,30 @@ void Dolorean::OnParamChange(int paramIdx) {
     case mSustain:
     case mRelease:
       _oscillator.setEnveloppeStageValue(static_cast<EnvelopeGenerator::Stage>(paramIdx), GetParam(paramIdx)->Value());
+      break;
+    case mFilterCutoff:
+      _oscillator.setCutoff(GetParam(paramIdx)->Value());
+      break;
+    case mFilterResonance:
+      _oscillator.setResonance(GetParam(paramIdx)->Value());
+      break;
+    case mFilterMode:
+      _oscillator.setFilterMode(static_cast<Filter::Mode>(GetParam(paramIdx)->Int()));
+      break;
+    case mFilterAttack:
+      _oscillator.setFilterStageValue(EnvelopeGenerator::Stage::Attack, GetParam(paramIdx)->Value());
+      break;
+    case mFilterDecay:
+      _oscillator.setFilterStageValue(EnvelopeGenerator::Stage::Decay, GetParam(paramIdx)->Value());
+      break;
+    case mFilterSustain:
+      _oscillator.setFilterStageValue(EnvelopeGenerator::Stage::Sustain, GetParam(paramIdx)->Value());
+      break;
+    case mFilterRelease:
+      _oscillator.setFilterStageValue(EnvelopeGenerator::Stage::Release, GetParam(paramIdx)->Value());
+      break;
+    case mFilterEnvelopeAmount:
+      _oscillator.setFilterEnvelopeAmount(GetParam(paramIdx)->Value());
       break;
   }
 }
