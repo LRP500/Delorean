@@ -1,19 +1,21 @@
-#ifndef __DOLOREAN__
-#define __DOLOREAN__
+#ifndef __DELOREAN__
+#define __DELOREAN__
 
 #define uint32 uint32_t // Dans le plus grand des calmes
 
 #include "IPlug_include_in_plug_hdr.h"
-#include "Oscillator.hpp"
+#include "Synth.hpp"
 #include "MIDIReceiver.hpp"
 
-class Dolorean : public IPlug
+#include <vector>
+
+class Delorean : public IPlug
 {
   static constexpr int k_virtualKeyboardMinimumNoteNumber = 48;
 
 public:
-  Dolorean(IPlugInstanceInfo instanceInfo);
-  ~Dolorean();
+  Delorean(IPlugInstanceInfo instanceInfo);
+  ~Delorean();
 
 public:
   void                          Reset();
@@ -27,7 +29,7 @@ public:
   inline bool                   GetKeyStatus(int key) const { return this->_MIDIReceiver.getKeyStatus(key); };
 
 private:
-  Oscillator                    _oscillator;
+  Synth                         _synth;
   MIDIReceiver                  _MIDIReceiver;
   IControl*                     _virtualKeyboard;
   int                           _lastVirtualKeyboardNoteNumber = k_virtualKeyboardMinimumNoteNumber - 1;

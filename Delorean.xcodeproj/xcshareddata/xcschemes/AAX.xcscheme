@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4F20EEC8132C69FE0030E34C"
-               BuildableName = "Dolorean.vst"
-               BlueprintName = "VST2"
-               ReferencedContainer = "container:Dolorean.xcodeproj">
+               BlueprintIdentifier = "4FB600121567CB0A0020189A"
+               BuildableName = "Delorean.aaxplugin"
+               BlueprintName = "AAX"
+               ReferencedContainer = "container:Delorean.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -44,15 +44,15 @@
       allowLocationSimulation = "YES">
       <PathRunnable
          runnableDebuggingMode = "0"
-         FilePath = "/Applications/REAPER.app">
+         FilePath = "/Applications/Avid/ProTools_3PDev/Pro Tools.app">
       </PathRunnable>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4F20EEC8132C69FE0030E34C"
-            BuildableName = "Dolorean.vst"
-            BlueprintName = "VST2"
-            ReferencedContainer = "container:Dolorean.xcodeproj">
+            BlueprintIdentifier = "4FB600121567CB0A0020189A"
+            BuildableName = "Delorean.aaxplugin"
+            BlueprintName = "AAX"
+            ReferencedContainer = "container:Delorean.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -66,7 +66,7 @@
       debugDocumentVersioning = "YES">
       <PathRunnable
          runnableDebuggingMode = "0"
-         FilePath = "/Applications/REAPER.app">
+         FilePath = "/Applications/Avid/ProTools_3PDev/Pro Tools.app">
       </PathRunnable>
    </ProfileAction>
    <AnalyzeAction

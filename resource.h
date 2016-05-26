@@ -1,19 +1,19 @@
 #define PLUG_MFR "Dive"
-#define PLUG_NAME "Dolorean"
+#define PLUG_NAME "Delorean"
 
-#define PLUG_CLASS_NAME Dolorean
+#define PLUG_CLASS_NAME Delorean
 
 #define BUNDLE_MFR "Dive"
-#define BUNDLE_NAME "Dolorean"
+#define BUNDLE_NAME "Delorean"
 
-#define PLUG_ENTRY Dolorean_Entry
-#define PLUG_VIEW_ENTRY Dolorean_ViewEntry
+#define PLUG_ENTRY Delorean_Entry
+#define PLUG_VIEW_ENTRY Delorean_ViewEntry
 
-#define PLUG_ENTRY_STR "Dolorean_Entry"
-#define PLUG_VIEW_ENTRY_STR "Dolorean_ViewEntry"
+#define PLUG_ENTRY_STR "Delorean_Entry"
+#define PLUG_VIEW_ENTRY_STR "Delorean_ViewEntry"
 
-#define VIEW_CLASS Dolorean_View
-#define VIEW_CLASS_STR "Dolorean_View"
+#define VIEW_CLASS Delorean_View
+#define VIEW_CLASS_STR "Delorean_View"
 
 // Format        0xMAJR.MN.BG - in HEX! so version 10.1.5 would be 0x000A0105
 #define PLUG_VER 0x00010000
@@ -34,7 +34,7 @@
 #endif
 
 #define PLUG_MFR_PT "Dive\nDive\nAcme"
-#define PLUG_NAME_PT "Dolorean\nIPEF"
+#define PLUG_NAME_PT "Delorean\nIPEF"
 #define PLUG_TYPE_PT "Effect"
 #define PLUG_DOES_AUDIOSUITE 1
 
@@ -59,15 +59,23 @@ instrument determined by PLUG _IS _INST
 #define BG_ID         101
 #define WHITE_KEY_ID  102
 #define BLACK_KEY_ID  103
+#define WAVEFORM_ID   104
+#define KNOB_ID       105
+#define KNOB_SMALL_ID 106
+#define FILTERMODE_ID 107
 
 // Image resource locations for this plug.
 #define BG_FN         "resources/img/bg.png"
 #define WHITE_KEY_FN  "resources/img/whitekey.png"
 #define BLACK_KEY_FN  "resources/img/blackkey.png"
+#define WAVEFORM_FN   "resources/img/waveform.png"
+#define KNOB_FN       "resources/img/knob.png"
+#define KNOB_SMALL_FN "resources/img/knob_small.png"
+#define FILTERMODE_FN "resources/img/filtermode.png"
 
 // GUI default dimensions
 #define GUI_WIDTH 434
-#define GUI_HEIGHT 66
+#define GUI_HEIGHT 296
 
 // on MSVC, you must define SA_API in the resource editor preprocessor macros as well as the c++ ones
 #if defined(SA_API) && !defined(OS_IOS)
@@ -80,6 +88,8 @@ instrument determined by PLUG _IS _INST
 #define EFFECT_TYPE_VST3 "Instrument|Synth"
 
 #define PLUG_DOES_MIDI 1
+
+#define uint32 uint32_t
 
 /* "Fx|Analyzer"", "Fx|Delay", "Fx|Distortion", "Fx|Dynamics", "Fx|EQ", "Fx|Filter",
 "Fx", "Fx|Instrument", "Fx|InstrumentExternal", "Fx|Spatial", "Fx|Generator",

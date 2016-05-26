@@ -6,7 +6,7 @@ REM - zipping requires 7zip in %ProgramFiles%\7-Zip\7z.exe
 REM - building installer requires innotsetup in "%ProgramFiles(x86)%\Inno Setup 5\iscc"
 REM - AAX codesigning requires ashelper tool added to %PATH% env variable and aax.key/.crt in .\..\..\..\Certificates\
 
-echo Making Dolorean win distribution ...
+echo Making Delorean win distribution ...
 
 echo ------------------------------------------------------------------
 echo Updating version numbers ...
@@ -33,10 +33,10 @@ REM - set preprocessor macros like this, for instance to enable demo build:
 REM - SET CMDLINE_DEFINES="DEMO_VERSION"
 
 REM - Could build individual targets like this:
-REM - msbuild Dolorean-app.vcxproj /p:configuration=release /p:platform=win32
+REM - msbuild Delorean-app.vcxproj /p:configuration=release /p:platform=win32
 
-msbuild Dolorean.sln /p:configuration=release /p:platform=win32 /nologo /noconsolelogger /fileLogger /v:quiet /flp:logfile=build-win.log;errorsonly 
-msbuild Dolorean.sln /p:configuration=release /p:platform=x64 /nologo /noconsolelogger /fileLogger /v:quiet /flp:logfile=build-win.log;errorsonly;append
+msbuild Delorean.sln /p:configuration=release /p:platform=win32 /nologo /noconsolelogger /fileLogger /v:quiet /flp:logfile=build-win.log;errorsonly 
+msbuild Delorean.sln /p:configuration=release /p:platform=x64 /nologo /noconsolelogger /fileLogger /v:quiet /flp:logfile=build-win.log;errorsonly;append
 
 #echo ------------------------------------------------------------------
 #echo Code sign aax binary...
@@ -51,18 +51,18 @@ echo Making Installer ...
 if exist "%ProgramFiles(x86)%" (goto 64-Bit-is) else (goto 32-Bit-is)
 
 :32-Bit-is
-"%ProgramFiles%\Inno Setup 5\iscc" /cc ".\installer\Dolorean.iss"
+"%ProgramFiles%\Inno Setup 5\iscc" /cc ".\installer\Delorean.iss"
 goto END-is
 
 :64-Bit-is
-"%ProgramFiles(x86)%\Inno Setup 5\iscc" /cc ".\installer\Dolorean.iss"
+"%ProgramFiles(x86)%\Inno Setup 5\iscc" /cc ".\installer\Delorean.iss"
 goto END-is
 
 :END-is
 
 REM - ZIP
-REM - "%ProgramFiles%\7-Zip\7z.exe" a .\installer\Dolorean-win-32bit.zip .\build-win\app\win32\bin\Dolorean.exe .\build-win\vst3\win32\bin\Dolorean.vst3 .\build-win\vst2\win32\bin\Dolorean.dll .\build-win\rtas\bin\Dolorean.dpm .\build-win\rtas\bin\Dolorean.dpm.rsr .\build-win\aax\bin\Dolorean.aaxplugin* .\installer\license.rtf .\installer\readmewin.rtf
-REM - "%ProgramFiles%\7-Zip\7z.exe" a .\installer\Dolorean-win-64bit.zip .\build-win\app\x64\bin\Dolorean.exe .\build-win\vst3\x64\bin\Dolorean.vst3 .\build-win\vst2\x64\bin\Dolorean.dll .\installer\license.rtf .\installer\readmewin.rtf
+REM - "%ProgramFiles%\7-Zip\7z.exe" a .\installer\Delorean-win-32bit.zip .\build-win\app\win32\bin\Delorean.exe .\build-win\vst3\win32\bin\Delorean.vst3 .\build-win\vst2\win32\bin\Delorean.dll .\build-win\rtas\bin\Delorean.dpm .\build-win\rtas\bin\Delorean.dpm.rsr .\build-win\aax\bin\Delorean.aaxplugin* .\installer\license.rtf .\installer\readmewin.rtf
+REM - "%ProgramFiles%\7-Zip\7z.exe" a .\installer\Delorean-win-64bit.zip .\build-win\app\x64\bin\Delorean.exe .\build-win\vst3\x64\bin\Delorean.vst3 .\build-win\vst2\x64\bin\Delorean.dll .\installer\license.rtf .\installer\readmewin.rtf
 
 echo ------------------------------------------------------------------
 echo Printing log file to console...

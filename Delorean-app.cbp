@@ -2,12 +2,12 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="Dolorean" />
+		<Option title="Delorean" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug Win32">
-				<Option output="build-win-cb-app/Dolorean" prefix_auto="1" extension_auto="1" />
+				<Option output="build-win-cb-app/Delorean" prefix_auto="1" extension_auto="1" />
 				<Option working_dir="build-win-cb-app/" />
 				<Option object_output="build-win-cb-app/Debug/" />
 				<Option type="1" />
@@ -26,7 +26,7 @@
 				</Compiler>
 			</Target>
 			<Target title="Release Win32">
-				<Option output="build-win-cb-app/Dolorean" prefix_auto="1" extension_auto="1" />
+				<Option output="build-win-cb-app/Delorean" prefix_auto="1" extension_auto="1" />
 				<Option working_dir="build-win-cb-app/" />
 				<Option object_output="build-win-cb-app/Release" />
 				<Option type="0" />
@@ -46,7 +46,7 @@
 				</Compiler>
 			</Target>
 			<Target title="Tracer Win32">
-				<Option output="build-win-cb-app/Dolorean" prefix_auto="1" extension_auto="1" />
+				<Option output="build-win-cb-app/Delorean" prefix_auto="1" extension_auto="1" />
 				<Option working_dir="build-win-cb-app/" />
 				<Option object_output="build-win-cb-app/Tracer" />
 				<Option type="0" />
@@ -261,11 +261,11 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="../../WDL/zlib/zutil.h" />
-		<Unit filename="Dolorean-app.cbp.rc">
+		<Unit filename="Delorean-app.cbp.rc">
 			<Option compilerVar="WINDRES" />
 		</Unit>
-		<Unit filename="Dolorean.cpp" />
-		<Unit filename="Dolorean.h" />
+		<Unit filename="Delorean.cpp" />
+		<Unit filename="Delorean.h" />
 		<Unit filename="app_wrapper/app_dialog.cpp" />
 		<Unit filename="app_wrapper/app_main.cpp" />
 		<Unit filename="app_wrapper/app_main.h" />

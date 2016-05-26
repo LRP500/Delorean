@@ -1,6 +1,6 @@
 //
 //  Oscillator.cpp
-//  Dolorean
+//  Delorean
 //
 //  Created by Morris on 20/05/16.
 //
@@ -75,6 +75,8 @@ void Oscillator::generate(double* buffer, int nFrames) {
                 }
             }
             break;
+        default:
+            break;
     }
 }
 
@@ -100,10 +102,14 @@ double Oscillator::nextSample() {
             value = -1.0 + (2.0 * this->_phase / k_2PI);
             value = 2.0 * (fabs(value) - 0.5);
             break;
+        default:
+            break;
     }
     this->_phase += this->_phaseIncrement;
     while (this->_phase >= k_2PI) {
         this->_phase -= k_2PI;
     }
+
     return value;
 }
+
